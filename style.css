@@ -1,0 +1,389 @@
+ /* Built by Noemie Baudouin https: //github.com/noemirtil */
+
+ @font-face {
+     font-family: 'Roboto';
+     font-style: normal;
+     font-weight: 600;
+     font-display: swap;
+     src: url('fonts/Roboto-Regular.woff2') format('woff2');
+ }
+
+ @font-face {
+     font-family: 'RobotoBold';
+     font-style: normal;
+     font-weight: 400;
+     font-display: swap;
+     src: url('fonts/Roboto-Regular.woff2') format('woff2');
+ }
+
+ @font-face {
+     font-family: 'SourceSerif';
+     font-style: normal;
+     font-weight: 500;
+     font-display: swap;
+     src: url('fonts/SourceSerif4Roman-Regular.woff2') format('woff2');
+ }
+
+ :root {
+     --coral: #d34d30;
+     --olive: #acac65;
+     --brown: #702917;
+     --brown-hsl: 12deg 66% 26%;
+     --beige: #eed3cA;
+     --light: #eeeee8;
+
+     --shadow-color: var(--brown-hsl);
+     --shadow-elevation-low:
+         0.1px 1px 1px hsl(var(--shadow-color) / 0.48),
+         0.1px 1.5px 1.5px -1.7px hsl(var(--shadow-color) / 0.39),
+         0.3px 4px 3.9px -3.5px hsl(var(--shadow-color) / 0.3);
+     --shadow-elevation-medium:
+         0.1px 1px 1px hsl(var(--shadow-color) / 0.4),
+         0.2px 2.1px 2.1px -0.9px hsl(var(--shadow-color) / 0.36),
+         0.4px 4.4px 4.3px -1.7px hsl(var(--shadow-color) / 0.31),
+         0.8px 9.8px 9.6px -2.6px hsl(var(--shadow-color) / 0.27),
+         1.6px 20px 19.6px -3.5px hsl(var(--shadow-color) / 0.22);
+     --shadow-elevation-high:
+         0.1px 1px 1px hsl(var(--shadow-color) / 0.38),
+         0.3px 3.3px 3.2px -0.4px hsl(var(--shadow-color) / 0.35),
+         0.5px 5.9px 5.8px -0.8px hsl(var(--shadow-color) / 0.33),
+         0.8px 9.6px 9.4px -1.2px hsl(var(--shadow-color) / 0.31),
+         1.2px 15.2px 14.9px -1.6px hsl(var(--shadow-color) / 0.29),
+         1.9px 23.5px 23px -1.9px hsl(var(--shadow-color) / 0.27);
+     --box-shadow: 0 2px 6px #7029177a;
+     --text-shadow: 2px 2px 2px #70291751;
+     --link-shadow: 2px 2px 1px var(--mid);
+     --menu-shadow: 2px 3px 1px var(--mid);
+ }
+
+ html {
+     font-size: 16px;
+     /* Defines the standard value for 1rem */
+ }
+
+ *,
+ *::before,
+ *::after {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     color: inherit;
+     /* To fix some spilling problems with grid and flex */
+     min-width: 0;
+     /* Hide scrollbars */
+     overflow-x: hidden;
+
+     /* for accessibility, increased line-height */
+     line-height: 1.5;
+     /* For smoother fonts on some mac browsers */
+     -webkit-font-smoothing: antialiased;
+
+     min-height: 100dvh;
+     background-color: var(--light);
+     color: var(--brown);
+
+     /* Avoid text overflow */
+     overflow-wrap: break-word;
+
+     text-decoration: none;
+     font-family: Roboto, Arial, Helvetica, sans-serif;
+
+
+     p,
+     ol,
+     ul,
+     form {
+         /* Improve line wrapping */
+         text-wrap: balance;
+         overflow-wrap: break-word;
+         padding: 0.5rem 0.5rem 0.8rem 0.5rem;
+         list-style-type: circle;
+     }
+
+     h1,
+     h2,
+     h3,
+     h4,
+     h5,
+     h6 {
+         font-family: SourceSerif, 'Times New Roman', Times, serif;
+         text-wrap: balance;
+         overflow-wrap: break-word;
+         padding: 0.5rem 0.5rem 0 0.5rem;
+         /* border: 1px solid; */
+     }
+
+     a:hover {
+         cursor: pointer;
+     }
+
+     hr {
+         border-top: 0 solid var(--olive);
+         margin: 0.5rem 0;
+     }
+
+     input,
+     button,
+     optgroup,
+     textarea,
+     select {
+         font: inherit;
+     }
+
+     button,
+     [type="button"],
+     [type="reset"],
+     [type="submit"] {
+         /* Correct the inability to style clickable types in iOS and Safari */
+         -webkit-appearance: button;
+     }
+
+     img,
+     iframe,
+     picture,
+     video,
+     canvas,
+     svg {
+         width: 100%;
+         height: auto;
+         overflow: hidden;
+         /* The image keeps its aspect ratio and fills the given dimension. The image will be clipped to fit */
+         object-fit: cover;
+         /* The image keeps its aspect ratio,
+                but is resized to fit within the given dimension */
+         /* Remove the gap between content and the bottom of their containers */
+         vertical-align: middle;
+         border: none;
+     }
+
+     fieldset {
+         /* Remove default fieldset styles */
+         border: 0;
+         margin: 0;
+         padding: 0;
+     }
+
+     textarea {
+         resize: none;
+     }
+
+     sub,
+     sup {
+         font-size: 75%;
+         line-height: 0;
+         position: relative;
+         vertical-align: baseline;
+     }
+
+     progress {
+         /* Add the correct vertical alignment in Chrome, Firefox, and Opera */
+         vertical-align: baseline;
+     }
+
+     /* Correct the cursor style of increment and decrement buttons in Chrome */
+     [type="number"]::-webkit-inner-spin-button,
+     [type="number"]::-webkit-outer-spin-button {
+         height: auto;
+     }
+
+     [type="search"] {
+         /* Correct the odd appearance in Chrome and Safari */
+         -webkit-appearance: textfield;
+         /* Correct the outline style in Safar */
+         outline-offset: -2px;
+     }
+
+     [type="search"]::-webkit-search-decoration {
+         /* Remove the inner padding in Chrome and Safari on macOS */
+         -webkit-appearance: none;
+     }
+
+     ::-webkit-file-upload-button {
+         /* Correct the inability to style clickable types in iOS and Safari */
+         -webkit-appearance: button;
+         /* Change font properties to `inherit` in Safari */
+         font: inherit;
+     }
+
+     details {
+         /* Add the correct display in Edge and Firefox */
+         display: block;
+     }
+
+     summary {
+         /* Add the correct display in all browsers */
+         display: list-item;
+     }
+
+     .hidden {
+         display: none;
+     }
+
+     .transparent {
+         visibility: hidden;
+     }
+ }
+
+ header {
+     position: sticky;
+     top: 0;
+     z-index: 1;
+     background-color: var(--coral);
+     color: white;
+     text-shadow: var(--text-shadow);
+
+     .shadow {
+         top: -200vh;
+         height: 200vh;
+         width: 100vw;
+         right: 0;
+         position: fixed;
+         background-image:
+             linear-gradient(#4c000ac8, #af2d3e00);
+         backdrop-filter: blur(8px);
+     }
+
+     .burger {
+         position: fixed;
+         right: 1rem;
+         top: 1rem;
+         background: none;
+         border: none;
+         transition: all 0.5s;
+
+         &:hover {
+             cursor: pointer;
+             transform: scale(1.6);
+             transition: all 0.2s;
+         }
+     }
+
+     .burger__bar1,
+     .burger__bar2,
+     .burger__bar3 {
+         background-color: white;
+         width: 21px;
+         height: 3px;
+         margin: 4px 0;
+     }
+
+     .burger--open .burger__bar1 {
+         transform: translate(0, 7px) rotate(-45deg);
+     }
+
+     .burger--open .burger__bar2 {
+         opacity: 0;
+     }
+
+     .burger--open .burger__bar3 {
+         transform: translate(0, -7px) rotate(45deg);
+     }
+
+     .nav-mobile {
+         position: absolute;
+         top: -200vh;
+         width: 68vw;
+         background-color: pink;
+     }
+
+     .show-mob {
+         top: 0;
+     }
+
+     .title {
+         font-size: 1.7rem;
+     }
+
+     .subtitle {
+         font-family: RobotoBold, Arial, Helvetica, sans-serif;
+         font-size: 1.7rem;
+         padding: 0 0.5rem 0.5rem 0.5rem;
+     }
+
+     .lang-mobile-sup {
+         display: flex;
+         justify-content: space-evenly;
+
+         button {
+             background-color: var(--olive);
+             font-family: RobotoBold, Arial, Helvetica, sans-serif;
+             font-size: 1.1rem;
+             font-weight: bold;
+             color: white;
+             padding: 0.3rem 0 0.2rem 0;
+             border-radius: 0.5rem;
+             border: none;
+             width: 6rem;
+             margin-bottom: 0.5rem;
+             box-shadow: var(--box-shadow);
+             text-shadow: var(--text-shadow);
+         }
+     }
+
+     .header-desktop {
+         display: none;
+     }
+
+     .show-desk {
+         display: flex;
+         left: 0;
+     }
+ }
+
+ main {
+
+     .hero {
+         background-color: var(--coral);
+
+         h2 {
+             font-size: 1.6rem;
+             color: white;
+             font-family: RobotoBold, Arial, Helvetica, sans-serif;
+             text-align: center;
+             text-shadow: var(--text-shadow);
+         }
+     }
+
+     ul {
+         padding-left: 2rem;
+     }
+
+     .aj {
+         padding: 0 0.5rem 1rem 0.5rem;
+     }
+
+     .domaines {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         gap: 0.5rem;
+
+         h2 {
+             width: 100%;
+             text-align: left;
+         }
+
+         .card {
+             background-color: var(--olive);
+             color: white;
+             box-shadow: var(--shadow-elevation-low);
+             text-shadow: var(--text-shadow);
+             border-radius: 0.7rem;
+             width: 90%;
+         }
+     }
+
+     form {
+         #nom,
+         #prenom,
+         #email,
+         #telephone,
+         #message {
+             width: 100%;
+         }
+     }
+
+ }
