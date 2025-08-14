@@ -26,9 +26,15 @@
 
  :root {
      --coral: #d34d30;
+     --coral-trans: #d34e30c4;
      --olive: #acac65;
+     --olive-dark: #787847;
+     --olive-black: #11110A;
+     --olive-white: #F9F9F1;
+     --olive-light: #E6E6C9;
      --brown: #702917;
      --brown-hsl: 12deg 66% 26%;
+     --brown-black: #0B0402;
      --beige: #eed3cA;
      --light: #eeeee8;
 
@@ -51,7 +57,7 @@
          1.2px 15.2px 14.9px -1.6px hsl(var(--shadow-color) / 0.29),
          1.9px 23.5px 23px -1.9px hsl(var(--shadow-color) / 0.27);
      --box-shadow: 0 2px 6px #7029177a;
-     --text-shadow: 2px 2px 2px #70291751;
+     --text-shadow: 2px 2px 2px #70291761;
      --link-shadow: 2px 2px 1px var(--mid);
      --menu-shadow: 2px 3px 1px var(--mid);
  }
@@ -82,8 +88,8 @@
      -webkit-font-smoothing: antialiased;
 
      min-height: 100dvh;
-     background-color: var(--light);
-     color: var(--brown);
+     background-color: var(--olive-white);
+     color: var(--brown-black);
 
      /* Avoid text overflow */
      overflow-wrap: break-word;
@@ -227,11 +233,20 @@
      }
  }
 
+ .back {
+     /* background-color: aqua; */
+    background-color: var(--coral);
+     width: 100%;
+     height: 9rem;
+     position: absolute;
+ }
+
  header {
      position: sticky;
      top: 0;
      z-index: 1;
-     background-color: var(--coral);
+     background-color: var(--coral-trans);
+     backdrop-filter: blur(8px);
      color: white;
      text-shadow: var(--text-shadow);
 
@@ -245,6 +260,8 @@
              linear-gradient(#4c000ac8, #af2d3e00);
          backdrop-filter: blur(8px);
      }
+
+
 
      .burger {
          position: fixed;
@@ -299,7 +316,7 @@
 
      .subtitle {
          font-family: RobotoBold, Arial, Helvetica, sans-serif;
-         font-size: 1.7rem;
+         font-size: 1.6rem;
          padding: 0 0.5rem 0.5rem 0.5rem;
      }
 
@@ -308,18 +325,18 @@
          justify-content: space-evenly;
 
          button {
-             background-color: var(--olive);
-             font-family: RobotoBold, Arial, Helvetica, sans-serif;
+             background-color: var(--olive-light);
+             font-family: Roboto, Arial, Helvetica, sans-serif;
              font-size: 1.1rem;
              font-weight: bold;
-             color: white;
+             color: var(--brown-black);
              padding: 0.3rem 0 0.2rem 0;
              border-radius: 0.5rem;
              border: none;
              width: 6rem;
              margin-bottom: 0.5rem;
-             box-shadow: var(--box-shadow);
-             text-shadow: var(--text-shadow);
+             box-shadow: var(--shadow-elevation-medium);
+             /* text-shadow: var(--text-shadow); */
          }
      }
 
@@ -339,7 +356,7 @@
          background-color: var(--coral);
 
          h2 {
-             font-size: 1.6rem;
+             font-size: 1.7rem;
              color: white;
              font-family: RobotoBold, Arial, Helvetica, sans-serif;
              text-align: center;
@@ -367,16 +384,17 @@
          }
 
          .card {
-             background-color: var(--olive);
-             color: white;
+             background-color: var(--olive-light);
+             color: var(--brown-black);
              box-shadow: var(--shadow-elevation-low);
-             text-shadow: var(--text-shadow);
+             /* text-shadow: var(--text-shadow); */
              border-radius: 0.7rem;
              width: 90%;
          }
      }
 
      form {
+
          #nom,
          #prenom,
          #email,
