@@ -326,7 +326,7 @@
 
          button {
              background-color: var(--olive-light);
-             font-family: Roboto, Arial, Helvetica, sans-serif;
+             font-family: RobotoBold, Arial, Helvetica, sans-serif;
              font-size: 1.1rem;
              font-weight: bold;
              color: var(--brown-black);
