@@ -58,7 +58,7 @@
                 </div>
             </div>
             <div class="lang-mobile-sup">
-                <button id="fra-mob-sup" class="current-page">Fraançais</button>
+                <button id="fra-mob-sup" class="current-page">Français</button>
                 <button id="esp-mob-sup" class="current-not">Español</button>
                 <button id="eng-mob-sup" class="current-not">English</button>
             </div>
@@ -156,37 +156,33 @@
                 <label for="nom" class="nom">Nom *</label>
                 <br>
                 <input type="text" id="nom" name="nom" placeholder="Obligatoire">
-                <hr>
                 <label for="prenom" class="prenom">Prénom *</label>
                 <br>
                 <input type="text" id="prenom" name="prenom" placeholder="Obligatoire" required>
-                <hr>
                 <label for="email" class="email">Adresse mail *</label>
                 <br>
                 <input type="text" id="email" name="email" placeholder="Obligatoire" required>
-                <hr>
                 <label for="telephone" class="telephone">Téléphone</label>
                 <br>
                 <input type="text" id="telephone" name="telephone" placeholder="Facultatif">
-                <hr>
-                <label for="message" id="message">Message *</label>
+                <label for="message" class="message">Message *</label>
                 <br>
-                <textarea rows="6" id="message" name="message" required>Obligatoire</textarea>
-                <hr>
+                <textarea rows="6" id="message" name="message" placeholder="Obligatoire" required></textarea>
                 <label for="consent" id="consent">Cocher la case *</label>
                 <input type="checkbox" class="consent" name="consent" required>
                 <p>J’accepte que les informations saisies soient utilisées exclusivement
                     pour me recontacter dans le cadre de ma demande. Ces données
                     ne seront ni conservées ni transmises à des tiers.</p>
-                <hr>
-                <button class="button1" type="submit" id="submit">Enviar&nbsp;&nbsp;&nbsp;<img class="arrow reverse"
+                <button class="button1" type="submit" id="submit">Envoyer&nbsp;&nbsp;&nbsp;<img class="arrow"
                         src="img/arrow.svg" alt="Icono enviar"></button>
             </form>
             <p>
-                Adresse : 8 rue de l’Echelle, 75001 Paris
-                <br>
                 Téléphone : +33 7 83 35 84 46
+                <br>
+                Adresse : 8 rue de l’Echelle, 75001 Paris
             </p>
+            <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                src="https://maps.google.com/maps?hl=fr&amp;q=8%20rue%20de%20l%E2%80%99Echelle,%2075001%20Paris&amp;t=m&amp;z=13&amp;ie=UTF8&amp;iwloc=addr&amp;output=embed"></iframe>
         </section>
     </main>
 
