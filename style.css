@@ -356,7 +356,6 @@
              width: 6rem;
              margin-bottom: 1rem;
              box-shadow: var(--shadow-elevation-medium);
-             /* text-shadow: var(--text-shadow); */
          }
      }
 
@@ -397,8 +396,7 @@
          text-align: center;
          background-color: var(--coral-light);
          color: var(--brown-black);
-         box-shadow: var(--shadow-elevation-low);
-         /* text-shadow: var(--text-shadow); */
+         box-shadow: var(--box-shadow);
          border-radius: 0.7rem;
          width: 90%;
          margin-inline: auto;
@@ -422,8 +420,7 @@
          .card {
              background-color: var(--olive-light);
              color: var(--brown-black);
-             box-shadow: var(--shadow-elevation-low);
-             /* text-shadow: var(--text-shadow); */
+             box-shadow: var(--box-shadow);
              border-radius: 0.7rem;
              width: 90%;
 
@@ -498,16 +495,16 @@
 
              .tel,
              .adresse {
-                background-color: white;
-                width: 40vw;
-                border-radius: 0.8rem;
+                 background-color: white;
+                 width: 40vw;
+                 border-radius: 0.8rem;
                  color: var(--olive-dark);
                  transition: all 0.4s;
                  box-shadow: var(--box-shadow);
                  padding: 1rem;
 
                  &:hover {
-                    cursor: pointer;
+                     cursor: pointer;
                      color: var(--olive-dark);
                      text-shadow: var(--text-shadow);
                      transform: scale(1.04);
