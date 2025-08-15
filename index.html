@@ -41,7 +41,7 @@
 <body>
     <div class="back"></div>
     <header>
-        <div class="shadow"></div>
+        <div class="shadow" id="shadow"></div>
         <h1 class="hidden">Maître Alma NEBOT ILLÁN | Avocate à Paris</h1>
         <h2 class="title">Alma NEBOT ILLÁN</h2>
         <h3 class="subtitle">Avocate à Paris</h3>
@@ -51,12 +51,16 @@
                 <div class="burger__bar2"></div>
                 <div class="burger__bar3"></div>
             </div>
-            <div class="nav-mobile">
-                <div class="menu-mobile">
-                    <button id="home-mob" class="current-page">Accueil</button>
-                    <button id="contact-mob" class="current-not">Contact</button>
+            <div class="nav-mobile" id="nav-mobile">
+                <div class="menu-mobile" id="menu-mobile">
+                    <a href="#hero-span" id="hero-mob" class="current-page">Accueil</a>
+                    <a href="#cabinet-span" id="cabinet-mob" class="current-not">Le cabinet</a>
+                    <a href="#domaines-span" id="domaines-mob" class="current-not">Domaines<br>d'intervention</a>
+                    <a href="#honoraires-span" id="honoraires-mob" class="current-not">Honoraires</a>
+                    <a href="#contact-span" id="contact-mob" class="current-not">Contact</a>
                 </div>
-                <div class="lang-mobile">
+                    
+                <div class="lang-mobile" id="lang-mobile">
                     <button id="fra-mob" class="current-page">Français</button>
                     <button id="esp-mob" class="current-not">Español</button>
                     <button id="eng-mob" class="current-not">English</button>
@@ -79,19 +83,22 @@
                 </div>
             </div>
             <div id="menu-desktop">
-                <button id="home-desk" class="current-page">Accueil</button>
-                <button id="contact-desk" class="current-not">Contact</button>
+                <a href="#hero" id="hero-desk" class="current-page">Accueil</a>
+                <a href="#cabinet" id="cabinet-desk" class="current-not">Le cabinet</a>
+                <a href="#domaines" id="domaines-desk" class="current-not">Domaines<br>d'intervention</a>
+                <a href="#honoraires" id="honoraires-desk" class="current-not">Honoraires</a>
+                <a href="#contact" id="contact-desk" class="current-not">Contact</a>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="hero">
-            <h2>Droit des étrangers<br>& droit d’asile</h2>
+        <section class="hero" id="hero">
+            <h2><span id="hero-span"></span>Droit des étrangers<br>& droit d’asile</h2>
             <img src="img/portrait.png" alt="Portrait de Alma Nebot Illán">
         </section>
-        <section class="cabinet">
-            <h2>Le Cabinet</h2>
+        <section class="cabinet" id="cabinet">
+            <h2><span id="cabinet-span"></span>Le Cabinet</h2>
             <p>
                 Avocate inscrite aux barreaux de Paris et de Barcelone, et parfaitement trilingue en français,
                 espagnol et anglais, Maître NEBOT ILLÁN vous assiste et représente face à l’administration et
@@ -103,8 +110,8 @@
                 <h3>Le cabinet accepte de vous représenter au titre de l’aide juridictionnelle.</h3>
             </div>
         </section>
-        <section class="domaines">
-            <h2>Domaines d’intervention</h2>
+        <section class="domaines" id="domaines">
+            <h2><span id="domaines-span"></span>Domaines d’intervention</h2>
             <div class="card">
                 <h3>ASILE</h3>
                 <ul>
@@ -143,9 +150,8 @@
                 </ul>
             </div>
         </section>
-
-        <section class="honoraires">
-            <h2>Honoraires</h2>
+        <section class="honoraires" id="honoraires">
+            <h2><span id="honoraires-span"></span>Honoraires</h2>
             <p>
                 Le cabinet accepte de vous représenter à l’aide juridictionnelle, totale ou partielle.
                 Sinon, une convention d’honoraires est établie de façon consensuelle.
@@ -155,8 +161,8 @@
             </p>
         </section>
         <hr>
-        <section class="contact">
-            <h2>Contact</h2>
+        <section class="contact" id="contact">
+            <h2><span id="contact-span"></span>Contact</h2>
             <form id="form" method="POST">
                 <input type="hidden" name="access_key" value="a9ec7a55-812a-4d24-bb69-b63898fc37f6">
                 <label for="nom" class="nom">Nom *</label>
@@ -188,9 +194,9 @@
                     <img class="arrow" src="img/arrow.svg" alt="Icono enviar"></button>
             </form>
             <div class="coordonnees">
-                <p class="tel"><a href="tel:+33783358446">Téléphone :<br>(+33)<br>07 83 35 84 46</a></p>
-                <p class="adresse"><a href="https://maps.app.goo.gl/SxtZ29cjpPp854Nb8">
-                        Adresse :<br>8 rue de l’Echelle, 75001 Paris</a></p>
+                <a href="tel:+33783358446"><button class="tel">Téléphone :<br>(+33)<br>07 83 35 84 46</button></a>
+                <a href="https://maps.app.goo.gl/SxtZ29cjpPp854Nb8"><button class="adresse">
+                        Adresse :<br>8 rue de l’Echelle,<br>75001 Paris</button></a>
             </div>
             <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
                 src="https://maps.google.com/maps?hl=fr&amp;q=8%20rue%20de%20l%E2%80%99Echelle,%2075001%20Paris&amp;t=m&amp;z=13&amp;ie=UTF8&amp;iwloc=addr&amp;output=embed"></iframe>

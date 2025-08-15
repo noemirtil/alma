@@ -36,7 +36,6 @@
      --brown: #702917;
      --brown-hsl: 12deg 66% 26%;
      --brown-black: #0B0402;
-     /* --brown-black: #4c3b39; */
      --brown-black-hsl: 6deg 14% 26%;
      --beige: #eed3cA;
      --beige-light: #F6E8E4;
@@ -69,6 +68,7 @@
 
  html {
      font-size: 16px;
+     scroll-behavior: smooth;
  }
 
  *,
@@ -107,7 +107,6 @@
 
      font-family: Roboto, Arial, Helvetica, sans-serif;
 
-
      p,
      ol,
      ul,
@@ -133,6 +132,16 @@
          /* padding-block: 1rem 0; */
      }
 
+     /* trick to offset the anchor scrolling navigation */
+     h2 {
+         position: relative;
+
+         & span {
+             position: absolute;
+             top: -140px;
+         }
+     }
+
      a {
          text-decoration: none;
          color: inherit;
@@ -144,8 +153,8 @@
 
      hr {
          color: var(--olive);
-         border-top: 0 solid var(--olive-light);
-         border-left: 0 solid var(--olive-light);
+         border-top: 0 solid var(--olive);
+         border-left: 0 solid var(--olive);
          margin: 1rem 0;
          width: 60vw;
      }
@@ -268,6 +277,7 @@
      backdrop-filter: blur(8px);
      color: white;
      text-shadow: var(--text-shadow);
+     transition: all 0.24s;
 
      .shadow {
          top: -200vh;
@@ -276,11 +286,67 @@
          right: 0;
          position: fixed;
          background-image:
-             linear-gradient(#4c000ac8, #af2d3e00);
+             linear-gradient(#4c000a,
+                 #0b0402b7,
+                 #0b040220);
          backdrop-filter: blur(8px);
+         transition: all 0.2s;
      }
 
+     .nav-mobile {
+         position: absolute;
+         top: -200vh;
+         height: 100vh;
+         width: 100vw;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         gap: 4rem;
+         font-size: 1.8rem;
+         text-align: center;
+         transition: all 0.5s;
+     }
 
+     .show-mob {
+         top: 0;
+         transition: all 0.5s;
+     }
+
+     .menu-mobile {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         gap: 2rem;
+         color: var(--coral-light);
+         text-shadow: none;
+         
+         &>.current-page {
+             width: 56vw;
+             border-inline: 4px solid white;
+             border-radius: 2px;
+             color: white;
+             transition: all 0.5s;
+
+             &:hover {
+                 cursor: default;
+                 transition: all 0.2s;
+             }
+         }
+
+         &>.current-not {
+             border-inline: 4px solid transparent;
+             color: var(--coral-light);
+             transition: all 0.5s;
+
+             &:hover {
+                 color: white;
+                 transform: scale(1.1);
+                 cursor: pointer;
+                 transition: all 0.2s;
+             }
+         }
+     }
 
      .burger {
          position: fixed;
@@ -289,6 +355,7 @@
          background: none;
          border: none;
          transition: all 0.5s;
+         z-index: 1;
 
          &:hover {
              cursor: pointer;
@@ -318,26 +385,17 @@
          transform: translate(0, -7px) rotate(45deg);
      }
 
-     .nav-mobile {
-         position: absolute;
-         top: -200vh;
-         width: 68vw;
-         background-color: pink;
-     }
-
-     .show-mob {
-         top: 0;
-     }
-
      .title {
          padding-top: 2.3vw;
          font-size: 1.7rem;
+         z-index: 1;
      }
 
      .subtitle {
          font-family: RobotoBold, Arial, Helvetica, sans-serif;
          font-size: 1.6rem;
          padding: 0 5vw 0.5rem 5vw;
+         z-index: 1;
      }
 
      .lang-mobile-sup {
@@ -499,9 +557,11 @@
                  width: 40vw;
                  border-radius: 0.8rem;
                  color: var(--olive-dark);
+                 font-size: 1rem;
                  transition: all 0.4s;
                  box-shadow: var(--box-shadow);
-                 padding: 1rem;
+                 padding-block: 1rem;
+                 border: none;
 
                  &:hover {
                      cursor: pointer;
