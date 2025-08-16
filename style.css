@@ -429,6 +429,11 @@
          z-index: 1;
      }
 
+         .header-titles {
+            color: white;
+            z-index: 9;
+         }
+
      .lang-mobile-sup {
          display: flex;
          justify-content: space-evenly;
@@ -475,6 +480,9 @@
 
      .hero {
          background-color: var(--olive);
+        background-image: linear-gradient(200deg,
+                    var(--olive-light),
+                    var(--olive));
          display: flex;
          align-items: center;
 
