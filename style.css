@@ -316,12 +316,10 @@
          text-align: center;
          transition: all 0.5s;
          gap: 2rem;
+         color: white;
 
          &>.current-page {
-             width: 56vw;
-             border-inline: 4px solid white;
-             border-radius: 2px;
-             color: white;
+             border-bottom: 4px solid white;
              transition: all 0.5s;
 
              &:hover {
@@ -331,22 +329,35 @@
          }
 
          &>.current-not {
-             border-inline: 4px solid transparent;
-             color: var(--olive-white);
+             border-bottom: 4px solid transparent;
              transition: all 0.5s;
 
              &:hover {
                  color: white;
-                 transform: scale(1.1);
+                 border-bottom: 4px solid white;
+                 transform: scale(1.12);
                  cursor: pointer;
                  transition: all 0.2s;
              }
-         }
-     }
 
-     .show-mob {
-         top: 0;
-         transition: all 0.5s;
+             /* Border animation */
+             &::after {
+                 content: '';
+                 position: absolute;
+                 width: 0;
+                 height: 0.21rem;
+                 left: 50%;
+                 bottom: -0.21rem;
+                 background-color: white;
+                 transition: all 0.4s;
+             }
+
+             &:hover::after {
+                 transition: all 0.14s;
+                 width: 100%;
+                 left: 0;
+             }
+         }
      }
 
      .header-mobile {
@@ -443,12 +454,32 @@
                      /* spaceholder to avoid jumping */
                      border-bottom: 0.3rem solid transparent;
                      transition: all 0.6s;
+                     /* Necessary for border animation */
+                     position: relative;
 
                      &:hover {
                          cursor: pointer;
                          color: var(--olive-darkest);
                          border-bottom: 0.3rem solid var(--olive);
-                         transition: all 0.3s;
+                         transition: all 0.5s;
+                     }
+
+                     /* Border animation */
+                     &::after {
+                         content: '';
+                         position: absolute;
+                         width: 0;
+                         height: 0.21rem;
+                         left: 50%;
+                         bottom: -0.21rem;
+                         background-color: var(--olive);
+                         transition: all 0.4s;
+                     }
+
+                     &:hover::after {
+                         transition: all 0.14s;
+                         width: 100%;
+                         left: 0;
                      }
                  }
              }
@@ -463,15 +494,23 @@
                  }
 
                  &.current-not {
-                     color: var(--olive-white);
-
                      &:hover {
                          color: white;
                          border-bottom: 0.3rem solid white;
                      }
+
+                     /* Border animation */
+                     &::after {
+                         background-color: white;
+                     }
                  }
              }
          }
+     }
+
+     .show-mob {
+         top: 0;
+         transition: all 0.5s;
      }
 
      .header-desktop {
