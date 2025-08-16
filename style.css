@@ -24,44 +24,61 @@
      src: url('fonts/SourceSerif4Roman-Regular.woff2') format('woff2');
  }
 
+ @font-face {
+     /**
+* @license
+* Font Family: Gambarino
+* Designed by: Théo Guillard
+* URL: https://www.fontshare.com/fonts/gambarino
+* © 2025 Indian Type Foundry
+*/
+     font-family: 'Gambarino-Regular';
+     src: url('fonts/Gambarino-Regular.woff2') format('woff2'),
+         url('fonts/Gambarino-Regular.woff') format('woff'),
+         url('fonts/Gambarino-Regular.ttf') format('truetype');
+     font-weight: 400;
+     font-display: swap;
+     font-style: normal;
+ }
+
+ @font-face {
+     font-family: 'ProductSans';
+     src: url('fonts/ProductSans-Regular.ttf') format('truetype');
+     font-weight: 400;
+     font-display: swap;
+     font-style: normal;
+ }
+
  :root {
-     --coral: #d34d30;
-     --coral-trans: #d34e30c4;
-     --coral-light: #FBEBE7;
-     --olive: #acac65;
-     --olive-dark: #787847;
-     --olive-black: #11110A;
-     --olive-white: #F9F9F1;
-     --olive-light: #E6E6C9;
-     --brown: #702917;
-     --brown-hsl: 12deg 66% 26%;
-     --brown-black: #0B0402;
-     --brown-black-hsl: 6deg 14% 26%;
-     --beige: #eed3cA;
-     --beige-light: #F6E8E4;
-     --light: #eeeee8;
+     --olive: #BCBC7E;
+     --olive-dark: #898951;
+     --olive-darkest: #787847;
+     --olive-black: #33331E;
+     --olive-black-hsl: 60deg 26% 16%;
+     --olive-white: #F7F7EC;
+     --olive-lighter: #EEEEDB;
+     --olive-light: #DDDDB9;
 
      --shadow-elevation-medium:
-         0.1px 1px 1px hsl(var(--brown-hsl) / 0.4),
-         0.2px 2.1px 2.1px -0.9px hsl(var(--brown-hsl) / 0.36),
-         0.4px 4.4px 4.3px -1.7px hsl(var(--brown-hsl) / 0.31),
-         0.8px 9.8px 9.6px -2.6px hsl(var(--brown-hsl) / 0.27),
-         1.6px 20px 19.6px -3.5px hsl(var(--brown-hsl) / 0.22);
-     --shadow-elevation-dark:
-         0.1px 1px 1px hsl(var(--brown-black-hsl) / 0.4),
-         0.2px 2.1px 2.1px -0.9px hsl(var(--brown-black-hsl) / 0.36),
-         0.4px 4.4px 4.3px -1.7px hsl(var(--brown-black-hsl) / 0.31),
-         0.8px 9.8px 9.6px -2.6px hsl(var(--brown-black-hsl) / 0.27),
-         1.6px 20px 19.6px -3.5px hsl(var(--brown-black-hsl) / 0.22);
+         0.1px 1px 1px hsl(var(--olive-black-hsl) / 0.4),
+         0.2px 2.1px 2.1px -0.9px hsl(var(--olive-black-hsl) / 0.36),
+         0.4px 4.4px 4.3px -1.7px hsl(var(--olive-black-hsl) / 0.31),
+         0.8px 9.8px 9.6px -2.6px hsl(var(--olive-black-hsl) / 0.27),
+         1.6px 20px 19.6px -3.5px hsl(var(--olive-black-hsl) / 0.22);
+     --shadow-elevation-low:
+         0.1px 1px 1px hsl(var(--olive-black-hsl) / 0.4),
+         0.2px 2.1px 2.1px -0.9px hsl(var(--olive-black-hsl) / 0.36),
+         0.4px 4.4px 4.3px -1.7px hsl(var(--olive-black-hsl) / 0.31),
+         0.8px 7px 7px -2.6px hsl(var(--olive-black-hsl) / 0.2);
      --shadow-elevation-high:
-         0.1px 1px 1px hsl(var(--brown-hsl) / 0.38),
-         0.3px 3.3px 3.2px -0.4px hsl(var(--brown-hsl) / 0.35),
-         0.5px 5.9px 5.8px -0.8px hsl(var(--brown-hsl) / 0.33),
-         0.8px 9.6px 9.4px -1.2px hsl(var(--brown-hsl) / 0.31),
-         1.2px 15.2px 14.9px -1.6px hsl(var(--brown-hsl) / 0.29),
-         1.9px 23.5px 23px -1.9px hsl(var(--brown-hsl) / 0.27);
-     --box-shadow: 0 2px 6px #0b04024b;
-     --text-shadow: 2px 2px 2px #0b040218;
+         0.1px 1px 1px hsl(var(--olive-black-hsl) / 0.38),
+         0.3px 3.3px 3.2px -0.4px hsl(var(--olive-black-hsl) / 0.35),
+         0.5px 5.9px 5.8px -0.8px hsl(var(--olive-black-hsl) / 0.33),
+         0.8px 9.6px 9.4px -1.2px hsl(var(--olive-black-hsl) / 0.31),
+         1.2px 15.2px 14.9px -1.6px hsl(var(--olive-black-hsl) / 0.29),
+         1.9px 23.5px 23px -1.9px hsl(var(--olive-black-hsl) / 0.27);
+     --box-shadow: 0 2px 6px #33331E;
+     --text-shadow: 2px 2px 2px #33331e88;
      --link-shadow: 2px 2px 1px var(--mid);
      --menu-shadow: 2px 3px 1px var(--mid);
  }
@@ -99,13 +116,11 @@
      -webkit-font-smoothing: antialiased;
 
      min-height: 100dvh;
-     background-color: var(--olive-white);
-     color: var(--brown-black);
 
      /* Avoid text overflow */
      overflow-wrap: break-word;
 
-     font-family: Roboto, Arial, Helvetica, sans-serif;
+     font-family: ProductSans, Roboto, Arial, Helvetica, sans-serif;
 
      p,
      ol,
@@ -125,7 +140,8 @@
      h4,
      h5,
      h6 {
-         font-family: SourceSerif, 'Times New Roman', Times, serif;
+         font-family: Gambarino-Regular, SourceSerif, 'Times New Roman', Times, serif;
+         letter-spacing: 0.5px;
          text-wrap: balance;
          overflow-wrap: break-word;
          padding: 1rem 5vw 0 5vw;
@@ -261,22 +277,18 @@
  }
 
  .back {
-     /* background-color: aqua; */
-     background-color: var(--coral);
+     background-color: white;
      width: 100%;
      height: 9rem;
      position: absolute;
  }
 
  header {
-
      position: sticky;
      top: 0;
      z-index: 1;
-     background-color: var(--coral-trans);
+     background-color: rgba(255, 255, 255, 0.857);
      backdrop-filter: blur(8px);
-     color: white;
-     text-shadow: var(--text-shadow);
      transition: all 0.24s;
 
      .shadow {
@@ -319,8 +331,8 @@
          align-items: center;
          gap: 2rem;
          color: var(--coral-light);
-         text-shadow: none;
-         
+         /* text-shadow: none; */
+
          &>.current-page {
              width: 56vw;
              border-inline: 4px solid white;
@@ -336,7 +348,7 @@
 
          &>.current-not {
              border-inline: 4px solid transparent;
-             color: var(--coral-light);
+             color: var(--olive-white);
              transition: all 0.5s;
 
              &:hover {
@@ -345,6 +357,19 @@
                  cursor: pointer;
                  transition: all 0.2s;
              }
+         }
+     }
+
+     .lang-mobile {
+         width: 100vw;
+         display: flex;
+         justify-content: space-evenly;
+
+         button {
+             background-color: transparent;
+             color: white;
+             border: none;
+             font-size: 1.6rem;
          }
      }
 
@@ -361,28 +386,34 @@
              cursor: pointer;
              transform: scale(1.4);
              transition: all 0.2s;
-         }
-     }
-
-     .burger__bar1,
-     .burger__bar2,
-     .burger__bar3 {
-         background-color: white;
-         width: 21px;
-         height: 3px;
-         margin: 4px 0;
-     }
-
-     .burger--open .burger__bar1 {
-         transform: translate(0, 7px) rotate(-45deg);
-     }
-
-     .burger--open .burger__bar2 {
-         opacity: 0;
-     }
-
-     .burger--open .burger__bar3 {
-         transform: translate(0, -7px) rotate(45deg);
+            }
+        }
+        
+        .burger__bar1,
+        .burger__bar2,
+        .burger__bar3 {
+            background-color: black;
+            width: 21px;
+            height: 3px;
+            margin: 4px 0;
+            transition: all 0.5s;
+        }
+        
+        .burger--open .burger__bar1 {
+            transition: all 0.3s;
+            transform: translate(0, 7px) rotate(-45deg);
+            background-color: white;
+        }
+        
+        .burger--open .burger__bar2 {
+            transition: all 0.3s;
+            opacity: 0;
+        }
+        
+        .burger--open .burger__bar3 {
+            transition: all 0.3s;
+            transform: translate(0, -7px) rotate(45deg);
+            background-color: white;
      }
 
      .title {
@@ -392,7 +423,7 @@
      }
 
      .subtitle {
-         font-family: RobotoBold, Arial, Helvetica, sans-serif;
+         font-family: ProductSans, RobotoBold, Arial, Helvetica, sans-serif;
          font-size: 1.6rem;
          padding: 0 5vw 0.5rem 5vw;
          z-index: 1;
@@ -403,17 +434,23 @@
          justify-content: space-evenly;
 
          button {
-             background-color: var(--olive-light);
-             font-family: RobotoBold, Arial, Helvetica, sans-serif;
+             background-color: var(--olive-white);
+             font-family: ProductSans, RobotoBold, Arial, Helvetica, sans-serif;
              font-size: 1.1rem;
-             font-weight: bold;
-             color: var(--brown-black);
+             color: black;
              padding: 0.3rem 0 0.2rem 0;
              border-radius: 0.5rem;
              border: none;
              width: 6rem;
-             margin-bottom: 1rem;
-             box-shadow: var(--shadow-elevation-medium);
+             box-shadow: var(--shadow-elevation-low);
+             transition: all 0.5s;
+
+             &:hover {
+                 cursor: pointer;
+                 transform: scale(1.04);
+                 transition: all 0.2s;
+                 box-shadow: var(--shadow-elevation-medium);
+             }
          }
      }
 
@@ -437,27 +474,46 @@
      }
 
      .hero {
-         background-color: var(--coral);
+         background-color: var(--olive);
+         display: flex;
+         align-items: center;
 
-         h2 {
-             padding-top: 0;
-             font-size: 1.7rem;
-             color: white;
-             font-family: RobotoBold, Arial, Helvetica, sans-serif;
-             text-align: center;
-             text-shadow: var(--text-shadow);
+         .hero-cards {
+             display: flex;
+             flex-direction: column;
+             justify-content: space-evenly;
+             height: 36vw;
+
+             h2 {
+                 background-color: var(--olive-darkest);
+                 color: white;
+                 border-radius: 3rem;
+                 padding: 0.2rem 0 0.2rem 0;
+                 width: 54vw;
+                 margin-left: 1rem;
+                 font-size: 4.8vw;
+                 font-family: ProductSans, RobotoBold, Arial, Helvetica, sans-serif;
+                 text-align: center;
+                 flex-shrink: 0;
+             }
+         }
+
+         img {
+             align-self: flex-end;
+             justify-self: self-end;
+             flex-shrink: 2;
          }
      }
 
      .aj {
          font-size: 1.1rem;
          text-align: center;
-         background-color: var(--coral-light);
-         color: var(--brown-black);
-         box-shadow: var(--box-shadow);
+         background-color: var(--olive-white);
+         box-shadow: var(--shadow-elevation-low);
          border-radius: 0.7rem;
          width: 90%;
          margin-inline: auto;
+         margin-bottom: 3rem;
 
          h3 {
              padding: 0.8rem;
@@ -476,9 +532,8 @@
          }
 
          .card {
-             background-color: var(--olive-light);
-             color: var(--brown-black);
-             box-shadow: var(--box-shadow);
+             /* background-color: var(--olive-light); */
+             /* box-shadow: var(--box-shadow); */
              border-radius: 0.7rem;
              width: 90%;
 
@@ -512,9 +567,9 @@
              }
 
              button {
-                 background: var(--coral);
+                 background: var(--olive-dark);
                  color: white;
-                 font-family: RobotoBold, Arial, Helvetica, sans-serif;
+                 font-family: ProductSans, RobotoBold, Arial, Helvetica, sans-serif;
                  font-weight: bold;
                  padding-block: 0.2rem;
                  width: 80%;
@@ -554,22 +609,22 @@
              .tel,
              .adresse {
                  background-color: white;
+                 color: var(--olive-black);
+                 border: solid 2px var(--olive-dark);
                  width: 40vw;
                  border-radius: 0.8rem;
-                 color: var(--olive-dark);
                  font-size: 1rem;
-                 transition: all 0.4s;
-                 box-shadow: var(--box-shadow);
+                 transition: all 0.5s;
+                 box-shadow: var(--shadow-elevation-low);
                  padding-block: 1rem;
-                 border: none;
+                 /* border: none; */
 
                  &:hover {
                      cursor: pointer;
-                     color: var(--olive-dark);
-                     text-shadow: var(--text-shadow);
+                     color: black;
                      transform: scale(1.04);
                      transition: all 0.1s;
-                     box-shadow: var(--shadow-elevation-dark);
+                     box-shadow: var(--shadow-elevation-medium);
                  }
              }
          }
@@ -599,7 +654,7 @@
 
          &:hover {
              transition: all 0.16s;
-             color: var(--brown);
+             color: var(--olive-black);
          }
      }
 
