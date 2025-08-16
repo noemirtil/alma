@@ -145,7 +145,6 @@
          text-wrap: balance;
          overflow-wrap: break-word;
          padding: 1rem 5vw 0 5vw;
-         /* padding-block: 1rem 0; */
      }
 
      /* trick to offset the anchor scrolling navigation */
@@ -360,19 +359,6 @@
          }
      }
 
-     .lang-mobile {
-         width: 100vw;
-         display: flex;
-         justify-content: space-evenly;
-
-         button {
-             background-color: transparent;
-             color: white;
-             border: none;
-             font-size: 1.6rem;
-         }
-     }
-
      .burger {
          position: fixed;
          right: 5vw;
@@ -386,76 +372,110 @@
              cursor: pointer;
              transform: scale(1.4);
              transition: all 0.2s;
-            }
-        }
-        
-        .burger__bar1,
-        .burger__bar2,
-        .burger__bar3 {
-            background-color: black;
-            width: 21px;
-            height: 3px;
-            margin: 4px 0;
-            transition: all 0.5s;
-        }
-        
-        .burger--open .burger__bar1 {
-            transition: all 0.3s;
-            transform: translate(0, 7px) rotate(-45deg);
-            background-color: white;
-        }
-        
-        .burger--open .burger__bar2 {
-            transition: all 0.3s;
-            opacity: 0;
-        }
-        
-        .burger--open .burger__bar3 {
-            transition: all 0.3s;
-            transform: translate(0, -7px) rotate(45deg);
-            background-color: white;
+         }
+     }
+
+     .burger__bar1,
+     .burger__bar2,
+     .burger__bar3 {
+         background-color: black;
+         width: 21px;
+         height: 3px;
+         margin: 4px 0;
+         transition: all 0.5s;
+     }
+
+     .burger--open .burger__bar1 {
+         transition: all 0.3s;
+         transform: translate(0, 7px) rotate(-45deg);
+         background-color: white;
+     }
+
+     .burger--open .burger__bar2 {
+         transition: all 0.3s;
+         opacity: 0;
+     }
+
+     .burger--open .burger__bar3 {
+         transition: all 0.3s;
+         transform: translate(0, -7px) rotate(45deg);
+         background-color: white;
      }
 
      .title {
          padding-top: 2.3vw;
          font-size: 1.7rem;
-         z-index: 1;
      }
 
      .subtitle {
+         position: relative;
          font-family: ProductSans, RobotoBold, Arial, Helvetica, sans-serif;
          font-size: 1.6rem;
          padding: 0 5vw 0.5rem 5vw;
-         z-index: 1;
      }
 
-         .header-titles {
-            color: white;
-            z-index: 9;
-         }
-
-     .lang-mobile-sup {
+     .lang-mobile {
          display: flex;
          justify-content: space-evenly;
 
          button {
-             background-color: var(--olive-white);
+             position: relative;
+             background-color: transparent;
              font-family: ProductSans, RobotoBold, Arial, Helvetica, sans-serif;
-             font-size: 1.1rem;
-             color: black;
+             font-size: 1.4rem;
              padding: 0.3rem 0 0.2rem 0;
-             border-radius: 0.5rem;
              border: none;
              width: 6rem;
-             box-shadow: var(--shadow-elevation-low);
              transition: all 0.5s;
 
              &:hover {
                  cursor: pointer;
-                 transform: scale(1.04);
-                 transition: all 0.2s;
-                 box-shadow: var(--shadow-elevation-medium);
+                 /* transform: scale(1.02); */
+                 transition: all 0.1s;
              }
+
+             &.current-page {
+                 border-bottom: 0.3rem solid var(--olive-dark);
+                 transition: all 0.5s;
+                 
+                 &:hover {
+                     cursor: default;
+                     transition: all 0.2s;
+                    }
+                }
+                
+                &.current-not {
+                    /* spaceholder to avoid jumping */
+                    border-bottom: 0.3rem solid transparent;
+                    transition: all 0.6s;
+                    
+                    &:hover {
+                        cursor: pointer;
+                        border-bottom: 0.3rem solid var(--olive);
+                     transition: all 0.3s;
+                 }
+             }
+         }
+     }
+
+     .header-nav {
+         color: white;
+
+         button {
+             color: white;
+
+            &.current-page {
+                    border-bottom: 0.3rem solid white;
+                }
+            
+                &.current-not {
+            
+                    &:hover {
+                        cursor: pointer;
+                        border-bottom: 0.3rem solid var(--olive);
+                        transition: all 0.3s;
+                    }
+                }
          }
      }
 
@@ -480,9 +500,9 @@
 
      .hero {
          background-color: var(--olive);
-        background-image: linear-gradient(200deg,
-                    var(--olive-light),
-                    var(--olive));
+         background-image: linear-gradient(200deg,
+                 var(--olive-light),
+                 var(--olive));
          display: flex;
          align-items: center;
 

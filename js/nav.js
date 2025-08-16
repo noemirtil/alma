@@ -3,7 +3,8 @@ const toggleMenu = () => {
     document.getElementById("nav-mobile").classList.toggle("show-mob");
     document.getElementById("shadow").classList.toggle("show-mob");
     document.getElementById("burger").classList.toggle("burger--open");
-    document.getElementById("header-titles").classList.toggle("header-titles");
+    document.getElementById("header-nav").classList.toggle("header-nav");
+    document.getElementById("lang-mobile").classList.toggle("header-nav");
 }
 
 const menuItems = {
@@ -36,21 +37,25 @@ window.addEventListener("load", (event) => {
         switch (target.id) {
             case 'hero-mob':
                 updateMenuStatus('hero');
+                toggleMenu();
                 break;
             case 'cabinet-mob':
                 updateMenuStatus('cabinet');
+                toggleMenu();
                 break;
             case 'domaines-mob':
                 updateMenuStatus('domaines');
+                toggleMenu();
                 break;
             case 'honoraires-mob':
                 updateMenuStatus('honoraires');
+                toggleMenu();
                 break;
             case 'contact-mob':
                 updateMenuStatus('contact');
+                toggleMenu();
                 break;
         }
-        toggleMenu();
     });
     // document.getElementById("menu-section").addEventListener('click', (e) => {
     //     let target = e.target;
