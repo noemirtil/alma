@@ -3,8 +3,8 @@ const toggleMenu = () => {
     document.getElementById("nav-mobile").classList.toggle("show-mob");
     document.getElementById("shadow").classList.toggle("show-mob");
     document.getElementById("burger").classList.toggle("burger--open");
-    document.getElementById("header-nav").classList.toggle("header-nav");
-    document.getElementById("lang-mobile").classList.toggle("header-nav");
+    document.getElementById("heading").classList.toggle("heading-hidden");
+    document.getElementById("lang-mobile").classList.toggle("lang-mobile-hidden");
 }
 
 const menuItems = {
