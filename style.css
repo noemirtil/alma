@@ -25,25 +25,32 @@
  }
 
  @font-face {
-     /**
-* @license
-* Font Family: Gambarino
-* Designed by: Théo Guillard
-* URL: https://www.fontshare.com/fonts/gambarino
-* © 2025 Indian Type Foundry
-*/
-     font-family: 'Gambarino-Regular';
-     src: url('fonts/Gambarino-Regular.woff2') format('woff2'),
-         url('fonts/Gambarino-Regular.woff') format('woff'),
-         url('fonts/Gambarino-Regular.ttf') format('truetype');
+     font-family: 'ProductSans';
+     src: url('fonts/ProductSans-Regular.ttf') format('truetype');
      font-weight: 400;
      font-display: swap;
      font-style: normal;
  }
 
  @font-face {
-     font-family: 'ProductSans';
-     src: url('fonts/ProductSans-Regular.ttf') format('truetype');
+     font-family: 'OswaldRegular';
+     src: url('fonts/Oswald-Regular.ttf') format('truetype');
+     font-weight: 400;
+     font-display: swap;
+     font-style: normal;
+ }
+
+ @font-face {
+     font-family: 'OswaldBold';
+     src: url('fonts/Oswald-Bold.ttf') format('truetype');
+     font-weight: 400;
+     font-display: swap;
+     font-style: normal;
+ }
+
+ @font-face {
+     font-family: 'OswaldLight';
+     src: url('fonts/Oswald-Light.ttf') format('truetype');
      font-weight: 400;
      font-display: swap;
      font-style: normal;
@@ -130,7 +137,6 @@
          text-wrap: balance;
          overflow-wrap: break-word;
          padding: 0.5rem 5vw 0.8rem 5vw;
-         /* padding-block: 0.5rem 0.8rem; */
          list-style-type: circle;
      }
 
@@ -140,20 +146,20 @@
      h4,
      h5,
      h6 {
-         font-family: Gambarino-Regular, SourceSerif, 'Times New Roman', Times, serif;
-         letter-spacing: 0.5px;
+         font-family: OswaldLight, SourceSerif, 'Times New Roman', Times, serif;
+         letter-spacing: 0.16rem;
          text-wrap: balance;
          overflow-wrap: break-word;
          padding: 1rem 5vw 0 5vw;
      }
 
-     /* trick to offset the anchor scrolling navigation */
      h2 {
+         /* trick to offset the anchor scrolling navigation */
          position: relative;
 
          & span {
              position: absolute;
-             top: -134px;
+             top: -7.125rem;
          }
      }
 
@@ -273,13 +279,6 @@
      .transparent {
          visibility: hidden;
      }
- }
-
- .back {
-     background-color: white;
-     width: 100%;
-     height: 9rem;
-     position: absolute;
  }
 
  header {
@@ -408,15 +407,16 @@
 
          .title {
              padding-top: 2.3vw;
-             font-size: 1.7rem;
+             font-size: 1.5rem;
          }
 
          .subtitle {
              position: relative;
              font-family: ProductSans, RobotoBold, Arial, Helvetica, sans-serif;
              color: var(--olive-black);
-             font-size: 1.6rem;
+             font-size: 1.4rem;
              padding: 0 5vw 0.5rem 5vw;
+             letter-spacing: 0.07rem;
          }
 
          .heading-hidden,
@@ -434,10 +434,10 @@
                  background-color: transparent;
                  color: var(--olive-black);
                  font-family: ProductSans, RobotoBold, Arial, Helvetica, sans-serif;
-                 font-size: 1.4rem;
+                 font-size: 1.1rem;
                  padding: 0.3rem 0 0.2rem 0;
                  border: none;
-                 width: 6rem;
+                 width: 4.4rem;
                  transition: all 0.5s;
 
                  &.current-page {
@@ -532,39 +532,48 @@
          width: 100vw;
      }
 
+
      .hero {
-         background-color: var(--olive);
          background-image: linear-gradient(200deg,
                  var(--olive-light),
                  var(--olive));
-         display: flex;
-         align-items: center;
+         display: grid;
+         grid-template-columns: 1.4fr 1fr 0;
+         grid-template-areas: "showcased picture";
+         /* To restrict auto-generated rows */
+         grid-auto-flow: column;
 
          .hero-cards {
+             grid-area: showcased;
              display: flex;
              flex-direction: column;
-             justify-content: space-evenly;
-             height: 36vw;
+             justify-content: center;
+             gap: 4vw;
+             margin-left: 4vw;
 
              h2 {
                  background-color: var(--olive-darkest);
                  color: white;
                  border-radius: 3rem;
                  padding: 0.2rem 0 0.2rem 0;
-                 width: 54vw;
-                 margin-left: 1rem;
                  font-size: 4.8vw;
                  font-family: ProductSans, RobotoBold, Arial, Helvetica, sans-serif;
+                 letter-spacing: 0.04rem;
                  text-align: center;
-                 flex-shrink: 0;
              }
          }
 
          img {
-             align-self: flex-end;
-             justify-self: self-end;
-             flex-shrink: 2;
+             grid-area: picture;
+             margin-top: 3vw;
          }
+     }
+
+     .hero-offset {
+         /* trick to offset the anchor scrolling navigation */
+         padding: 0;
+         top: -18.75rem;
+         /* Change px to vw when ready for desktop version */
      }
 
      .aj {
@@ -594,8 +603,6 @@
          }
 
          .card {
-             /* background-color: var(--olive-light); */
-             /* box-shadow: var(--box-shadow); */
              border-radius: 0.7rem;
              width: 90%;
 
@@ -679,7 +686,6 @@
                  transition: all 0.5s;
                  box-shadow: var(--shadow-elevation-low);
                  padding-block: 1rem;
-                 /* border: none; */
 
                  &:hover {
                      cursor: pointer;
