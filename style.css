@@ -543,7 +543,7 @@
          /* To restrict auto-generated rows */
          grid-auto-flow: column;
 
-         .hero-cards {
+         /* .hero-cards {
              grid-area: showcased;
              display: flex;
              flex-direction: column;
@@ -560,6 +560,18 @@
                  font-family: ProductSans, RobotoBold, Arial, Helvetica, sans-serif;
                  letter-spacing: 0.04rem;
                  text-align: center;
+             }
+         } */
+
+         .presentation {
+             grid-area: showcased;
+             display: flex;
+             align-items: center;
+
+             h3 {
+                 text-align: center;
+                 padding: 0 0 0 2rem;
+                 font-family: OswaldRegular, SourceSerif, 'Times New Roman', Times, serif;
              }
          }
 
