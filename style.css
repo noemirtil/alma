@@ -552,14 +552,23 @@
              margin-left: 4vw;
 
              h2 {
-                 background-color: var(--olive-darkest);
+                 /* background-color: var(--olive-darkest); */
                  color: white;
-                 border-radius: 3rem;
+                 /* border-radius: 3rem; */
                  padding: 0.2rem 0 0.2rem 0;
-                 font-size: 4.8vw;
+                 font-size: 7vw;
                  font-family: ProductSans, RobotoBold, Arial, Helvetica, sans-serif;
                  letter-spacing: 0.04rem;
                  text-align: center;
+                text-shadow:
+                        1px 1px 0 var(--olive-darkest),
+                        1px -1px 0 var(--olive-darkest),
+                        -1px 1px 0 var(--olive-darkest),
+                        -1px -1px 0 var(--olive-darkest),
+                        1px 0 0 var(--olive-darkest),
+                        0 1px 0 var(--olive-darkest),
+                        -1px 0 0 var(--olive-darkest),
+                        0 -1px 0 var(--olive-darkest);
              }
          }
 
