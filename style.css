@@ -544,7 +544,7 @@
 
      .accueil-section {
          position: relative;
-         background-image: linear-gradient(200deg,
+         background-image: linear-gradient(250deg,
                  var(--olive-light),
                  var(--olive));
          height: 40vw;
@@ -557,8 +557,8 @@
              h2 {
                  background-image: linear-gradient(90deg,
                          white,
-                         var(--olive-lighter),
-                         var(--olive-lighter),
+                         var(--olive-white),
+                         var(--olive-white),
                          var(--olive-light),
                          var(--olive-light));
                  color: black;
@@ -598,7 +598,15 @@
      .aj {
          font-size: 1.1rem;
          text-align: center;
-         background-color: var(--olive-white);
+         /* background-color: var(--olive-white); */
+        background-image: linear-gradient(90deg,
+        var(--olive-lighter),
+        var(--olive-white),
+        var(--olive-white),
+        var(--olive-white),
+        var(--olive-white),
+        var(--olive-white),
+                    var(--olive-lighter));
          /* box-shadow: var(--shadow-elevation-low); */
          border-radius: 0.8rem;
          width: 90%;
