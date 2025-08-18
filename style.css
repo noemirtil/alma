@@ -1,67 +1,19 @@
  /* Built by Noemie Baudouin https: //github.com/noemirtil */
 
  @font-face {
-     font-family: 'Roboto';
+     font-family: 'LaoUi';
      font-style: normal;
-     font-weight: 600;
+     font-weight: 900;
      font-display: swap;
-     src: url('fonts/Roboto-Regular.woff2') format('woff2');
+     src: url('fonts/lao-ui.ttf') format('truetype');
  }
 
  @font-face {
-     font-family: 'RobotoBold';
+     font-family: 'PlayfairDisplayRegular';
      font-style: normal;
-     font-weight: 400;
+     font-weight: 900;
      font-display: swap;
-     src: url('fonts/Roboto-Regular.woff2') format('woff2');
- }
-
- @font-face {
-     font-family: 'SourceSerif';
-     font-style: normal;
-     font-weight: 500;
-     font-display: swap;
-     src: url('fonts/SourceSerif4Roman-Regular.woff2') format('woff2');
- }
-
- @font-face {
-     font-family: 'ProductSansRegular';
-     src: url('fonts/ProductSans-Regular.ttf') format('truetype');
-     font-weight: 400;
-     font-display: swap;
-     font-style: normal;
- }
-
- @font-face {
-     font-family: 'ProductSansLight';
-     src: url('fonts/ProductSans-Light.ttf') format('truetype');
-     font-weight: 400;
-     font-display: swap;
-     font-style: normal;
- }
-
- @font-face {
-     font-family: 'OswaldRegular';
-     src: url('fonts/Oswald-Regular.ttf') format('truetype');
-     font-weight: 400;
-     font-display: swap;
-     font-style: normal;
- }
-
- @font-face {
-     font-family: 'OswaldBold';
-     src: url('fonts/Oswald-Bold.ttf') format('truetype');
-     font-weight: 400;
-     font-display: swap;
-     font-style: normal;
- }
-
- @font-face {
-     font-family: 'OswaldLight';
-     src: url('fonts/Oswald-Light.ttf') format('truetype');
-     font-weight: 400;
-     font-display: swap;
-     font-style: normal;
+     src: url('fonts/PlayfairDisplay-Regular.ttf') format('truetype');
  }
 
  :root {
@@ -136,7 +88,8 @@
      /* Avoid text overflow */
      overflow-wrap: break-word;
 
-     font-family: ProductSansRegular, Roboto, Arial, Helvetica, sans-serif;
+     font-family: LaoUi, Arial, Helvetica, sans-serif;
+     letter-spacing: 0.03rem;
 
      p,
      ol,
@@ -155,11 +108,11 @@
      h4,
      h5,
      h6 {
-         font-family: OswaldLight, SourceSerif, 'Times New Roman', Times, serif;
-         letter-spacing: 0.16rem;
+         font-family: PlayfairDisplayRegular, 'Times New Roman', Times, serif;
          text-wrap: balance;
          overflow-wrap: break-word;
          padding: 1rem 5vw 0 5vw;
+         letter-spacing: 0.03rem;
      }
 
      h2 {
@@ -185,8 +138,8 @@
          color: var(--olive);
          border-top: 0 solid var(--olive);
          border-left: 0 solid var(--olive);
-         margin: 1rem 0;
-         width: 60vw;
+         margin: 2rem 0;
+         width: 20vw;
      }
 
      input,
@@ -421,11 +374,10 @@
 
          .subtitle {
              position: relative;
-             font-family: ProductSansRegular, RobotoBold, Arial, Helvetica, sans-serif;
-             color: var(--olive-black);
-             font-size: 1.4rem;
+             font-family: LaoUi, Arial, Helvetica, sans-serif;
+             color: black;
+             font-size: 1.2rem;
              padding: 0 5vw 0.5rem 5vw;
-             letter-spacing: 0.07rem;
          }
 
          .heading-hidden,
@@ -442,7 +394,7 @@
              button {
                  background-color: transparent;
                  color: var(--olive-black);
-                 font-family: ProductSansRegular, RobotoBold, Arial, Helvetica, sans-serif;
+                 font-family: LaoUi, Arial, Helvetica, sans-serif;
                  font-size: 1.1rem;
                  padding: 0.3rem 0 0.2rem 0;
                  border: none;
@@ -541,50 +493,25 @@
          width: 100vw;
      }
 
-
      .accueil-section {
-         position: relative;
-         background-image: linear-gradient(250deg,
-                 var(--olive-light),
-                 var(--olive));
-         height: 40vw;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         text-align: center;
 
-         .accueil-cards {
-             position: relative;
-             display: flex;
-             flex-direction: column;
-
-             h2 {
-                 background-image: linear-gradient(90deg,
-                         white,
-                         var(--olive-white),
-                         var(--olive-white),
-                         var(--olive-light),
-                         var(--olive-light));
-                 color: black;
-                 padding: 1.4vw 0 1.4vw 4.7vw;
-                 font-size: 6vw;
-                 font-family: ProductSansLight, RobotoBold, Arial, Helvetica, sans-serif;
-                 letter-spacing: 0.04rem;
-                 text-align: left;
-                 margin-top: 4vw;
-             }
+         .second_line {
+             padding-top: 0;
          }
 
-         img {
-             position: absolute;
-             width: 40vw;
-             right: 0;
-             bottom: 0;
-         }
+         .line {
+            width: 100vw;
+             border-bottom: solid 1px var(--olive);
 
-         p {
-            position: absolute;
-            font-size: 11vw;
-            top: 7.6vw;
-            left: -1vw;
-            color: var(--olive-dark-trans);
-            font-family: RobotoBold, Arial, Helvetica, sans-serif;
+             img {
+                 padding-top: 1rem;
+                 margin-top: 1rem;
+                 width: 60vw;
+                }
          }
      }
 
@@ -599,14 +526,14 @@
          font-size: 1.1rem;
          text-align: center;
          /* background-color: var(--olive-white); */
-        background-image: linear-gradient(90deg,
-        var(--olive-lighter),
-        var(--olive-white),
-        var(--olive-white),
-        var(--olive-white),
-        var(--olive-white),
-        var(--olive-white),
-                    var(--olive-lighter));
+         background-image: linear-gradient(90deg,
+                 var(--olive-lighter),
+                 var(--olive-white),
+                 var(--olive-white),
+                 var(--olive-white),
+                 var(--olive-white),
+                 var(--olive-white),
+                 var(--olive-lighter));
          /* box-shadow: var(--shadow-elevation-low); */
          border-radius: 0.8rem;
          width: 90%;
@@ -662,9 +589,9 @@
              button {
                  background: var(--olive-dark);
                  color: white;
-                 font-family: ProductSansRegular, RobotoBold, Arial, Helvetica, sans-serif;
+                 font-family: Arial, Helvetica, sans-serif;
                  font-weight: bold;
-                 padding-block: 0.2rem;
+                 padding-block: 0.3rem 0.2rem;
                  width: 80%;
                  font-size: 1.3rem;
                  border-radius: 50px;
@@ -754,6 +681,4 @@
 
  /* MARK: @media 570
 */
- @media screen and (min-width: 570px) {
-
- }
+ @media screen and (min-width: 570px) {}
