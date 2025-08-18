@@ -16,6 +16,30 @@
      src: url('fonts/PlayfairDisplay-Regular.ttf') format('truetype');
  }
 
+ @font-face {
+     font-family: 'OFLGoudyStMTT';
+     font-style: normal;
+     font-weight: 900;
+     font-display: swap;
+     src: url('fonts/OFLGoudyStMTT.ttf') format('truetype');
+ }
+
+ @font-face {
+     font-family: 'microsoft-jhenghei';
+     font-style: normal;
+     font-weight: 900;
+     font-display: swap;
+     src: url('fonts/microsoft-jhenghei.ttf') format('truetype');
+ }
+
+ @font-face {
+     font-family: 'microsoft-jhenghei-bold';
+     font-style: normal;
+     font-weight: 100;
+     font-display: swap;
+     src: url('fonts/microsoft-jhenghei.ttf') format('truetype');
+ }
+
  :root {
      --olive: #BCBC7E;
      --olive-dark: #898951;
@@ -88,8 +112,8 @@
      /* Avoid text overflow */
      overflow-wrap: break-word;
 
-     font-family: LaoUi, Arial, Helvetica, sans-serif;
-     letter-spacing: 0.03rem;
+     font-family: microsoft-jhenghei, Arial, Helvetica, sans-serif;
+     letter-spacing: 0.02rem;
 
      p,
      ol,
@@ -108,7 +132,7 @@
      h4,
      h5,
      h6 {
-         font-family: PlayfairDisplayRegular, 'Times New Roman', Times, serif;
+         font-family: OFLGoudyStMTT, 'Times New Roman', Times, serif;
          text-wrap: balance;
          overflow-wrap: break-word;
          padding: 1rem 5vw 0 5vw;
@@ -262,7 +286,6 @@
                  #0b0402b7,
                  #0b040220);
          backdrop-filter: blur(9px);
-         transition: all 0.2s;
      }
 
      .nav-mobile {
@@ -375,7 +398,7 @@
 
          .subtitle {
              position: relative;
-             font-family: LaoUi, Arial, Helvetica, sans-serif;
+             font-family: microsoft-jhenghei, Arial, Helvetica, sans-serif;
              color: black;
              font-size: 1.2rem;
              padding: 0 5vw 0.5rem 5vw;
@@ -395,7 +418,7 @@
              button {
                  background-color: transparent;
                  color: var(--olive-black);
-                 font-family: LaoUi, Arial, Helvetica, sans-serif;
+                 font-family: microsoft-jhenghei, Arial, Helvetica, sans-serif;
                  font-size: 1.1rem;
                  padding: 0.3rem 0 0.2rem 0;
                  border: none;
@@ -500,8 +523,12 @@
          align-items: center;
          text-align: center;
 
-         .second_line {
-             padding-top: 0;
+         .accueil-title h2 {
+             letter-spacing: 0;
+
+             &.second_line {
+                 padding-top: 0;
+             }
          }
 
          .line {
@@ -510,7 +537,7 @@
 
              img {
                  padding-top: 1rem;
-                 margin-top: 1rem;
+                 /* margin-top: 1rem; */
                  width: 60vw;
              }
          }
@@ -590,7 +617,7 @@
              button {
                  background: var(--olive-dark);
                  color: white;
-                 font-family: Arial, Helvetica, sans-serif;
+                 font-family: microsoft-jhenghei-bold, Arial, Helvetica, sans-serif;
                  font-weight: bold;
                  padding-block: 0.3rem 0.2rem;
                  width: 80%;
@@ -680,6 +707,13 @@
 
  }
 
- /* MARK: @media 570
+ /* MARK: @media 600
 */
- @media screen and (min-width: 570px) {}
+ @media screen and (min-width: 600px) {
+
+     header {
+         .burger {
+             display: none;
+         }
+     }
+ }
