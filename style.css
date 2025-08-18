@@ -138,6 +138,7 @@
          color: var(--olive);
          border-top: 0 solid var(--olive);
          border-left: 0 solid var(--olive);
+         border-bottom: solid 1px var(--olive);
          margin: 2rem 0;
          width: 20vw;
      }
@@ -504,14 +505,14 @@
          }
 
          .line {
-            width: 100vw;
+             width: 100vw;
              border-bottom: solid 1px var(--olive);
 
              img {
                  padding-top: 1rem;
                  margin-top: 1rem;
                  width: 60vw;
-                }
+             }
          }
      }
 
