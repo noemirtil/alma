@@ -751,3 +751,9 @@
      }
 
  }
+
+ /* MARK: @media 570
+*/
+ @media screen and (min-width: 570px) {
+
+ }
