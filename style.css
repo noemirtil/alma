@@ -542,14 +542,14 @@
      }
 
 
-     .hero {
+     .accueil-section {
          position: relative;
          background-image: linear-gradient(200deg,
                  var(--olive-light),
                  var(--olive));
          height: 40vw;
 
-         .hero-cards {
+         .accueil-cards {
              position: relative;
              display: flex;
              flex-direction: column;
@@ -588,14 +588,7 @@
          }
      }
 
-     .hero::after {
-         position: absolute;
-         background-color: pink;
-         height: 20vw;
-         width: 100vw;
-     }
-
-     .hero-offset {
+     .accueil {
          /* trick to offset the anchor scrolling navigation */
          padding: 0;
          top: -18.75rem;
@@ -637,7 +630,7 @@
          }
      }
 
-     .contact {
+     .contact-section {
          form {
 
              #nom,

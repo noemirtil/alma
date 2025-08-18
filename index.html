@@ -73,11 +73,11 @@
                 <button id="eng-mob" class="current-not">English</button>
             </div>
             <div class="nav-mobile" id="nav-mobile">
-                <a href="#hero-span" id="hero-mob" class="current-page">Accueil</a>
-                <a href="#cabinet-span" id="cabinet-mob" class="current-not">Le cabinet</a>
-                <a href="#domaines-span" id="domaines-mob" class="current-not">Domaines<br>d'intervention</a>
-                <a href="#honoraires-span" id="honoraires-mob" class="current-not">Honoraires</a>
-                <a href="#contact-span" id="contact-mob" class="current-not">Contact</a>
+                <a href="#accueil" id="accueil-mob" class="current-page">Accueil</a>
+                <a href="#cabinet" id="cabinet-mob" class="current-not">Le cabinet</a>
+                <a href="#domaines" id="domaines-mob" class="current-not">Domaines<br>d'intervention</a>
+                <a href="#honoraires" id="honoraires-mob" class="current-not">Honoraires</a>
+                <a href="#contact" id="contact-mob" class="current-not">Contact</a>
             </div>
         </div>
 
@@ -91,7 +91,7 @@
                 </div>
             </div>
             <div id="menu-desktop">
-                <a href="#hero" id="hero-desk" class="current-page">Accueil</a>
+                <a href="#accueil" id="accueil-desk" class="current-page">Accueil</a>
                 <a href="#cabinet" id="cabinet-desk" class="current-not">Le cabinet</a>
                 <a href="#domaines" id="domaines-desk" class="current-not">Domaines<br>d'intervention</a>
                 <a href="#honoraires" id="honoraires-desk" class="current-not">Honoraires</a>
@@ -101,17 +101,18 @@
     </header>
 
     <main>
-        <section class="hero" id="hero">
-            <div class="hero-cards">
+        <section class="accueil-section" id="accueil-section">
+            <div class="accueil-cards">
                 <h2>Droit des étrangers</h2>
                 <h2>Droit d’asile</h2>
             </div>
             <img src="img/portrait.png" alt="Portrait de Maître Nebot Illán">
             <p>&</p>
         </section>
-        <h2 class="hero-offset"><span id="hero-span"></span></h2>
-        <section class="cabinet" id="cabinet">
-            <h2><span id="cabinet-span"></span>Le Cabinet</h2>
+        <!-- This one is offset for crolling -->
+        <h2 class="accueil"><span id="accueil"></span></h2>
+        <section class="cabinet-section" id="cabinet-section">
+            <h2><span id="cabinet"></span><a href="#cabinet">Le Cabinet</a></h2>
             <p>
                 Avocate inscrite aux barreaux de Paris et de Barcelone, et parfaitement trilingue en français,
                 espagnol et anglais, Maître NEBOT ILLÁN vous assiste et représente face à l’administration et
@@ -123,8 +124,8 @@
                 <h3>Le cabinet accepte de vous représenter au titre de l’aide juridictionnelle.</h3>
             </div>
         </section>
-        <section class="domaines" id="domaines">
-            <h2><span id="domaines-span"></span>Domaines d’intervention</h2>
+        <section class="domaines-section" id="domaines-section">
+            <h2><span id="domaines"></span><a href="#domaines">Domaines d’intervention</a></h2>
             <div class="cards-flex">
                 <div class="card">
                     <h3>ASILE</h3>
@@ -165,9 +166,8 @@
                 </div>
             </div>
         </section>
-        <!-- <hr> -->
-        <section class="honoraires" id="honoraires">
-            <h2><span id="honoraires-span"></span>Honoraires</h2>
+        <section class="honoraires-section" id="honoraires-section">
+            <h2><span id="honoraires"></span><a href="#honoraires">Honoraires</a></h2>
             <p>
                 Le cabinet accepte de vous représenter à l’aide juridictionnelle, totale ou partielle.
                 Sinon, une convention d’honoraires est établie de façon consensuelle.
@@ -177,8 +177,8 @@
             </p>
         </section>
         <hr>
-        <section class="contact" id="contact">
-            <h2><span id="contact-span"></span>Contact</h2>
+        <section class="contact-section" id="contact-section">
+            <h2><span id="contact"></span><a href="#contact">Contact</a></h2>
             <form id="form" method="POST">
                 <input type="hidden" name="access_key" value="a9ec7a55-812a-4d24-bb69-b63898fc37f6">
                 <label for="nom" class="nom">Nom *</label>

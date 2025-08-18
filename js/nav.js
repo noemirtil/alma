@@ -8,7 +8,7 @@ const toggleMenu = () => {
 }
 
 const menuItems = {
-    'hero': ['hero-mob', 'hero-desk'],
+    'acuueil': ['accueil-mob', 'accueil-desk'],
     'cabinet': ['cabinet-mob', 'cabinet-desk'],
     'domaines': ['domaines-mob', 'domaines-desk'],
     'honoraires': ['honoraires-mob', 'honoraires-desk'],
@@ -35,8 +35,8 @@ window.addEventListener("load", (event) => {
     document.getElementById("nav-mobile").addEventListener('click', (e) => {
         let target = e.target;
         switch (target.id) {
-            case 'hero-mob':
-                updateMenuStatus('hero');
+            case 'accueil-mob':
+                updateMenuStatus('accueil');
                 toggleMenu();
                 break;
             case 'cabinet-mob':
