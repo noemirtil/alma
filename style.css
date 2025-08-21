@@ -1,11 +1,11 @@
  /* Built by Noemie Baudouin https: //github.com/noemirtil */
 
  @font-face {
-     font-family: 'calisto-mt';
+     font-family: 'calisto-mt-bold';
      font-style: normal;
      font-weight: 900;
      font-display: swap;
-     src: url('fonts/calisto-mt.ttf') format('truetype');
+     src: url('fonts/calisto-mt-bold.ttf') format('truetype');
  }
 
  @font-face {
@@ -16,13 +16,13 @@
      src: url('fonts/microsoft-jhenghei.ttf') format('truetype');
  }
 
- @font-face {
+ /* @font-face {
      font-family: 'microsoft-jhenghei-bold';
      font-style: normal;
-     font-weight: 100;
+     font-weight: 900;
      font-display: swap;
-     src: url('fonts/microsoft-jhenghei.ttf') format('truetype');
- }
+     src: url('fonts/microsoft-jhenghei-bold.ttf') format('truetype');
+ } */
 
  :root {
      --olive-old: #BCBC7E;
@@ -37,6 +37,7 @@
 
      /* chati */
      --olive: #748c63;
+     --olive-mid-light: #A7BA9A;
      --olive-light: #e6ede1;
      --olive-lighter: #f3f6f1;
 
@@ -110,6 +111,7 @@
      form {
          /* Improve line wrapping */
          text-wrap: balance;
+         /* text-align: justify; */
          overflow-wrap: break-word;
          padding: 0.5rem 5vw 0.8rem 5vw;
          list-style-type: circle;
@@ -121,7 +123,8 @@
      h4,
      h5,
      h6 {
-         font-family: Georgia, calisto-mt, 'Times New Roman', Times, serif;
+         font-family: calisto-mt-bold, Georgia, 'Times New Roman', Times, serif;
+         letter-spacing: 0.04rem;
          text-wrap: balance;
          overflow-wrap: break-word;
          padding: 1rem 5vw 0 5vw;
@@ -168,6 +171,8 @@
      [type="submit"] {
          /* Correct the inability to style clickable types in iOS and Safari */
          -webkit-appearance: button;
+
+         font-family: system-ui, Arial, Helvetica, sans-serif;
      }
 
      img,
@@ -260,7 +265,6 @@
      position: sticky;
      top: 0;
      z-index: 1;
-     /* background-color: rgba(255, 255, 255, 0.857); */
      background-color: #e6ede1e4;
      transition: all 0.24s;
      border-bottom: solid 0.2rem var(--olive);
@@ -383,16 +387,19 @@
          }
 
          .title {
-             padding-top: 2.3vw;
-             font-size: 6vw;
-             font-weight: 600;
+             font-size: max(1rem, 6.7vw);
+             /* height: min(4.2rem, 12.6vw); */
+             line-height: max(1rem, 8vw);
+             padding-top: 1.2rem;
          }
 
          .subtitle {
              position: relative;
              font-family: msjhl, Arial, Helvetica, sans-serif;
-             font-size: 3.4vw;
-             padding: 0 5vw 0.5rem 5vw;
+             letter-spacing: 0.014rem;
+             font-size: max(1rem, 4.4vw);
+             font-weight: 900;
+             padding: 0 5vw 2vw 5vw;
          }
 
          .heading-hidden,
@@ -401,7 +408,7 @@
          }
 
          .lang-mobile {
-             width: 50vw;
+             width: max(226px, 58vw);
              padding: 0 0 4vw 5vw;
              display: flex;
              justify-content: space-between;
@@ -411,8 +418,8 @@
              button {
                  background-color: transparent;
                  color: black;
-                 font-family: msjhl, Arial, Helvetica, sans-serif;
-                 font-size: 3.3vw;
+                 font-weight: 500;
+                 font-size: max(1rem, 3.5vw);
                  padding: 0.1rem;
                  border: none;
                  transition: all 0.5s;
@@ -497,18 +504,6 @@
          display: flex;
          left: 0;
      }
-
-     /* .backdrop-edge {
-         position: absolute;
-         left: 0;
-         right: 0;
-         bottom: 0;
-         height: 1rem;
-         background: hsl(0deg 0% 100% / 0.1);
-         backdrop-filter: blur(12px) brightness(1.04);
-         transform: translateY(100%);
-         pointer-events: none;
-     } */
  }
 
  main {
@@ -528,9 +523,11 @@
          /* border-bottom: solid 1px var(--olive); */
 
          .accueil-title h2 {
-             font-size: 5.4vw;
+             font-size: max(1rem, 5.6vw);
+             line-height: max(1.8rem, 5.6vw);
              font-weight: 400;
              letter-spacing: 0.016rem;
+             padding-top: 1.6rem;
 
              &.second_line {
                  padding-top: 0;
@@ -558,7 +555,6 @@
      }
 
      .aj {
-         /* font-size: 1.1rem; */
          text-align: center;
          background-color: var(--olive-lighter);
          /* background-image: linear-gradient(90deg,
@@ -578,7 +574,6 @@
          h3 {
              font-family: msjhl, Arial, Helvetica, sans-serif;
              padding: 0.8rem;
-             font-size: 1.08rem;
          }
      }
 
@@ -617,11 +612,48 @@
              width: 90vw;
              border-radius: 0.8rem;
              border: solid 3px var(--olive-light);
+             margin-bottom: 1.6rem;
 
              & h3,
              & h4,
              & ul {
                  padding-left: 2rem;
+
+                 li {
+                     padding-bottom: 0.6rem;
+                 }
+             }
+
+             h4 {
+                 padding-top: 0.5rem;
+                 font-size: max(1rem, 3.2vw);
+             }
+
+             .card-head {
+                 display: flex;
+                 justify-content: space-between;
+                 /* align-items: end; */
+
+                 img {
+                     padding: 1rem 2rem 0 0;
+                     width: 4rem;
+                 }
+
+                 .airplane {
+                     transform: rotate(-45deg) translateY(-0.8rem);
+                 }
+
+                 h3 {
+                     position: relative;
+                     top: 0.2rem;
+                     font-size: max(1rem, 3.6vw);
+                 }
+
+             }
+
+             .naturalisation {
+                 padding-top: 0;
+                 font-size: max(1rem, 3.6vw);
              }
          }
      }
@@ -650,8 +682,7 @@
              .submit {
                  background: var(--olive);
                  color: white;
-                 font-family: microsoft-jhenghei-bold, Arial, Helvetica, sans-serif;
-                 font-weight: bold;
+                 font-weight: 700;
                  padding: 0.8rem 1.6rem 0.7rem 1.6rem;
                  font-size: 1.2rem;
                  border-radius: 0.8rem;
@@ -727,7 +758,7 @@
      color: var(--olive);
 
      a {
-         color: var(--olive-light);
+         color: var(--olive-mid-light);
          transition: all 0.6s;
 
          &:hover {
