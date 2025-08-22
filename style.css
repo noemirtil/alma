@@ -69,13 +69,6 @@
      margin: 0;
      padding: 0;
      box-sizing: border-box;
-     /* MARK: ONLY DURING
-      */
-
-     scrollbar-width: none;
-
-     /* MARK: DEVELOPMENT
-     */
  }
 
  body {
@@ -642,30 +635,44 @@
                      width: 4.5rem;
 
                      transform:
-                         scale(0.8) translateY(1rem) rotate(-45deg);
+                         translateY(1rem) translateX(0.5rem) rotate(-45deg);
+                 }
+
+                 .earth,
+                 .hands,
+                 .graduate {
+                     transform:
+                         scale(0.7);
+                     padding-inline: 5px;
+                     margin-left: 1.2rem;
+                     padding-top: 0.4rem;
                  }
 
                  h3 {
                      position: relative;
-                     top: calc(1.1rem - 1.6vw);
+                     top: calc(1.2rem - 1.6vw);
                      /* top: 0.7rem; */
-                     font-size: max(1rem, 3.6vw);
-                     padding-left: 1rem
+                     font-size: max(1.1rem, 3.6vw);
+                     padding-left: 0.4rem
                  }
 
                  .eloignement {
-                     padding-left: 0.6rem;
+                     padding-left: 1.2rem;
                  }
 
-             }
 
-             .graduate {
-                 position: relative;
-                 top: 1.2rem;
-             }
+                 .graduate {
+                     position: relative;
+                     top: 1.2rem;
+                 }
+                }
+
+                 #graduate-head{
+                    padding: 0;
+                 }
 
              .naturalisation {
-                 padding: 0 0 0 5rem;
+                 padding: 0 0 0.5rem 5.5rem;
                  font-size: max(1rem, 3.6vw);
              }
          }
@@ -953,9 +960,9 @@
  @media screen and (min-width: 1000px) {
 
      main {
-        .accueil-section {
-            margin-top: 50px;
-        }
+         .accueil-section {
+             margin-top: 50px;
+         }
 
          .accueil-section,
          .cabinet-section,
