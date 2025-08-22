@@ -16,14 +16,6 @@
      src: url('fonts/microsoft-jhenghei.ttf') format('truetype');
  }
 
- /* @font-face {
-     font-family: 'microsoft-jhenghei-bold';
-     font-style: normal;
-     font-weight: 900;
-     font-display: swap;
-     src: url('fonts/microsoft-jhenghei-bold.ttf') format('truetype');
- } */
-
  :root {
      --olive-old: #BCBC7E;
      --olive-dark: #898951;
@@ -134,9 +126,9 @@
          /* trick to offset the anchor scrolling navigation */
          position: relative;
 
-         & span {
+         span {
              position: absolute;
-             top: -8rem;
+             top: calc(-7rem - 5vw);
          }
      }
 
@@ -388,7 +380,6 @@
 
          .title {
              font-size: max(1rem, 6.7vw);
-             /* height: min(4.2rem, 12.6vw); */
              line-height: max(1rem, 8vw);
              padding-top: 1.2rem;
          }
@@ -514,18 +505,19 @@
      section {
          width: 100vw;
 
-        a {
-                display: inline-block;
-                /* NEcessary for transform on inline elements */
-                text-decoration: underline var(--olive) 2px;
-                transition: all 0.6s;
+         h3 a,
+         p a {
+             display: inline-block;
+             /* NEcessary for transform on inline elements */
+             text-decoration: underline var(--olive) 2px;
+             transition: all 0.6s;
 
-                &:hover {
-                    transition: all 0.2s;
-                    text-decoration: underline var(--olive-mid-light) 4px;
-                    transform: scale(1.02) translateY(-0.03rem);
-                }
-            }
+             &:hover {
+                 transition: all 0.2s;
+                 text-decoration: underline var(--olive-mid-light) 4px;
+                 transform: scale(1.02) translateY(-0.03rem);
+             }
+         }
      }
 
      .accueil-section {
@@ -563,8 +555,7 @@
      .accueil {
          /* trick to offset the anchor scrolling navigation */
          padding: 0;
-         top: -26rem;
-         /* Change px to vw when ready for desktop version */
+         top: calc(-26rem - 40vw);
      }
 
      .aj {
@@ -791,6 +782,27 @@
 
  }
 
+ /* MARK: @media 450
+*/
+ @media screen and (min-width: 450px) {
+
+     /* trick to offset the anchor scrolling navigation */
+     #cabinet,
+     #honoraires,
+     #domaines,
+     #contact {
+         top: calc(-8rem - 11vw);
+     }
+
+     #second_line {
+         padding-top: 1vw;
+     }
+
+     #subtitle {
+         top: -1vw;
+     }
+ }
+
  /* MARK: @media 600
 */
  @media screen and (min-width: 600px) {
@@ -798,9 +810,34 @@
          .burger {
              display: none;
          }
+
+         #title {
+             font-size: min(2.5rem, 6.7vw);
+             padding-top: 1.4rem;
+             line-height: 3.06rem;
+         }
+
+         #subtitle {
+             font-size: min(1.64rem, 4.4vw);
+             top: -0.6rem;
+             padding-bottom: 0;
+         }
+
+         #lang-mobile {
+             width: calc(19.8rem + 5vw);
+
+             button {
+                 font-size: 1.4rem;
+             }
+         }
+
+         #lang-mobile {
+            padding-bottom: 1rem;
+         }
      }
 
      main {
+
          .accueil-section {
              display: grid;
              grid-template-columns: 50vw 50vw;
