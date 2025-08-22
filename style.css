@@ -261,10 +261,12 @@
          width: 100vw;
          right: 0;
          position: fixed;
-         background-image:
+         /* background-image:
              linear-gradient(#4c1000,
                  #0b0402b7,
-                 #0b040220);
+                 #0b040220); */
+         background-image:
+             linear-gradient(#002011c8, #0a2d14c1);
          backdrop-filter: blur(9px);
      }
 
@@ -495,6 +497,43 @@
      flex-direction: column;
      align-items: center;
 
+     #form-shadow {
+         height: 200vh;
+         width: 100vw;
+         right: 0;
+         position: fixed;
+         background-image:
+             linear-gradient(#002011c8, #0a2d14c1);
+         backdrop-filter: blur(9px);
+         z-index: 2;
+     }
+
+     .form-shadow-class {
+         top: -200vh;
+     }
+
+     .show-form {
+         display: block;
+         top: 0;
+     }
+
+     #result {
+         height: 100vh;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+         padding: 1rem;
+
+         p {
+             color: white;
+             font-size: min(34px, 7vw);
+             white-space: pre-line;
+             /* Necessary for escaping \n newline in JS innerHTML */
+         }
+     }
+
      section {
          width: 100vw;
 
@@ -665,11 +704,11 @@
                      position: relative;
                      top: 1.2rem;
                  }
-                }
+             }
 
-                 #graduate-head{
-                    padding: 0;
-                 }
+             #graduate-head {
+                 padding: 0;
+             }
 
              .naturalisation {
                  padding: 0 0 0.5rem 5.5rem;
