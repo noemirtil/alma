@@ -112,12 +112,12 @@
 
     <main>
         <section class="accueil-section" id="accueil-section">
-            <div class="accueil-title">
+            <div class="accueil-title" id="accueil-title">
                 <h2>Droit des étrangers</h2>
-                <h2 class="second_line" id="second_line">& Droit d’asile</h2>
+                <h2 class="second-line" id="second-line">& Droit d’asile</h2>
             </div>
             <div class="greenback">
-                <img src="img/portrait.png" alt="Portrait de Maître Nebot Illán">
+                <img src="img/portrait.png" alt="Portrait de Maître Nebot Illán" id="portrait">
             </div>
         </section>
         <!-- This one is offset for scrolling -->
@@ -133,7 +133,9 @@
             </p>
             <h2 class="hidden">Aide juridictionnelle</h2>
             <div class="aj">
-                <h3>Le cabinet accepte de vous représenter au titre de l'<a href="https://www.formulaires.service-public.fr/gf/cerfa_16146.do">aide juridictionnelle</a>.</h3>
+                <h3>Le cabinet accepte de vous représenter au titre de l'<a
+                        href="https://www.formulaires.service-public.fr/gf/cerfa_16146.do">aide juridictionnelle</a>.
+                </h3>
             </div>
         </section>
         <button class="rdv" type="submit" id="rdv">Prendre rendez-vous</button>
@@ -195,7 +197,9 @@
         <section class="honoraires-section" id="honoraires-section">
             <h2><span id="honoraires"></span><a href="#honoraires">Honoraires</a></h2>
             <p>
-                Le cabinet accepte de vous représenter à l'<a href="https://www.formulaires.service-public.fr/gf/cerfa_16146.do">aide juridictionnelle</a>, totale ou partielle.
+                Le cabinet accepte de vous représenter à l'<a
+                    href="https://www.formulaires.service-public.fr/gf/cerfa_16146.do">aide juridictionnelle</a>, totale
+                ou partielle.
                 Sinon, une convention d'honoraires est établie de façon consensuelle.
                 <br>En cas de dépôt de dossier au cabinet,<br>Maître NEBOT ILLAN offre la première consultation.
                 Le cabinet propose des facilités de paiement et accepte les règlements en plusieurs fois, par
@@ -235,13 +239,18 @@
                 <button class="submit" type="submit" id="submit">Envoyer&nbsp;&nbsp;
                     <img class="arrow" src="img/arrow.svg" alt="Icono enviar"></button>
             </form>
-            <div class="coordonnees">
-                <a href="tel:+33783358446"><button class="tel">Téléphone :<br>(+33)<br>07 83 35 84 46</button></a>
-                <a href="https://maps.app.goo.gl/SxtZ29cjpPp854Nb8"><button class="adresse">
-                        Adresse :<br>8 rue de l'Echelle,<br>75001 Paris</button></a>
+            <div class="map-coord">
+                <div class="coordonnees" id="coordonnees">
+                    <a href="tel:+33783358446"><button class="tel">Téléphone :<br>(+33)<br>07 83 35 84
+                            46</button></a>
+                    <a href="https://maps.app.goo.gl/SxtZ29cjpPp854Nb8"><button class="adresse">
+                            Adresse :<br>8 rue de l'Echelle,<br>75001 Paris</button></a>
+                </div>
+                <div class="map">
+                    <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                        src="https://maps.google.com/maps?hl=fr&amp;q=8%20rue%20de%20l%E2%80%99Echelle,%2075001%20Paris&amp;t=m&amp;z=13&amp;ie=UTF8&amp;iwloc=addr&amp;output=embed"></iframe>
+                </div>
             </div>
-            <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-                src="https://maps.google.com/maps?hl=fr&amp;q=8%20rue%20de%20l%E2%80%99Echelle,%2075001%20Paris&amp;t=m&amp;z=13&amp;ie=UTF8&amp;iwloc=addr&amp;output=embed"></iframe>
         </section>
     </main>
 
