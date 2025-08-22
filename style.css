@@ -953,6 +953,9 @@
  @media screen and (min-width: 1000px) {
 
      main {
+        .accueil-section {
+            margin-top: 50px;
+        }
 
          .accueil-section,
          .cabinet-section,
