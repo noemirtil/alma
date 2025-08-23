@@ -846,14 +846,14 @@
 
      header {
 
-        #title {
-                font-size: 1.9rem;
-                padding-top: 1.4rem;
-                line-height: 3.06rem;
-            }
+         #title {
+             font-size: 1.9rem;
+             padding-top: 1.4rem;
+             line-height: 3.06rem;
+         }
 
          #subtitle {
-            font-size: 1.26rem;
+             font-size: 1.26rem;
              top: -0.2rem;
              padding-bottom: 0.7rem;
          }
@@ -898,14 +898,11 @@
 
          #lang-mobile {
              width: 21.6rem;
+             padding-bottom: 1rem;
 
              button {
                  font-size: 1.3rem;
              }
-         }
-
-         #lang-mobile {
-             padding-bottom: 1rem;
          }
      }
 
@@ -1020,161 +1017,165 @@
          #lang-mobile {
              padding-left: 0;
          }
-     }
 
-     main {
-         display: grid;
-         grid-template-columns: 5vw 45vw 45vw 5vw;
-         grid-template-areas:
-             " accueil accueil accueil accueil "
-             " . cabinet domaines . "
-             " . engagement domaines . "
-             " . honoraires domaines . "
-             " . contact-title domaines . "
-             " . form map-coord . ";
-
-         hr {
-             display: none;
+         #lang-mobile {
+             width: 18.5rem;
+         }
          }
 
-         .accueil-section {
-             grid-area: accueil;
-             margin-block: 2rem;
-             width: min(70rem, 90vw);
-             margin-inline: auto;
-             grid-template-columns: min(35rem, 45vw) min(35rem, 45vw);
+         main {
+             display: grid;
+             grid-template-columns: 5vw 45vw 45vw 5vw;
+             grid-template-areas:
+                 " accueil accueil accueil accueil "
+                 " . cabinet domaines . "
+                 " . engagement domaines . "
+                 " . honoraires domaines . "
+                 " . contact-title domaines . "
+                 " . form map-coord . ";
 
-             #accueil-title {
-                 h2 {
-                     font-size: 2.3rem;
+             hr {
+                 display: none;
+             }
+
+             .accueil-section {
+                 grid-area: accueil;
+                 margin-block: 2rem;
+                 width: min(70rem, 90vw);
+                 margin-inline: auto;
+                 grid-template-columns: min(35rem, 45vw) min(35rem, 45vw);
+
+                 #accueil-title {
+                     h2 {
+                         font-size: 2.3rem;
+                     }
                  }
              }
-         }
 
-         .cabinet-section {
-             grid-area: cabinet;
-             width: min(45vw, 35rem);
-             align-self: start;
-             justify-self: end;
-
-             h2,
-             p {
-                 padding-inline: 0 4rem;
-             }
-
-             p {
-                 margin-bottom: 2rem;
-             }
-
-             .aj {
-                 width: min(40vw, 31rem);
-                 margin-left: 0;
-             }
-
-             .rdv-cont {
-                 grid-area: rdv;
-                 width: min(40vw, 31rem);
-                 display: flex;
-                 justify-content: center;
-                 justify-self: end;
-                 margin-left: 0;
-                 margin-bottom: 3rem;
-             }
-         }
-
-         .engagement-section {
-             grid-area: engagement;
-             width: min(45vw, 35rem);
-             align-self: start;
-             justify-self: end;
-             margin-bottom: 2rem;
-
-             h2,
-             p {
-                 padding-inline: 0 4rem;
-             }
-         }
-
-         .honoraires-section {
-             grid-area: honoraires;
-             width: min(45vw, 35rem);
-             align-self: start;
-             justify-self: end;
-             margin-bottom: 2rem;
-
-             h2,
-             p {
-                 padding-inline: 0 4rem;
-             }
-         }
-
-         .domaines-section {
-             grid-area: domaines;
-             align-self: start;
-             width: min(45vw, 35rem);
-
-             h2 {
-                 padding-inline: 0 4rem;
-             }
-
-             .card {
+             .cabinet-section {
+                 grid-area: cabinet;
                  width: min(45vw, 35rem);
-             }
-         }
-
-         .contact-section {
-             display: contents;
-
-             .contact {
-                 grid-area: contact-title;
-                 padding-inline: 0;
-                 width: min(45vw, 35rem);
+                 align-self: start;
                  justify-self: end;
-             }
 
-             .form {
-                 grid-area: form;
-                 width: min(45vw, 35rem);
-                 padding-inline: 0 4rem;
-                 justify-self: end;
-                 padding-bottom: 0;
+                 h2,
+                 p {
+                     padding-inline: 0 4rem;
+                 }
 
                  p {
-                     padding-inline: 0;
-                     text-align: center;
+                     margin-bottom: 2rem;
                  }
 
-                 .submit {
-                     margin-bottom: 4px;
+                 .aj {
+                     width: min(40vw, 31rem);
+                     margin-left: 0;
+                 }
+
+                 .rdv-cont {
+                     grid-area: rdv;
+                     width: min(40vw, 31rem);
+                     display: flex;
+                     justify-content: center;
+                     justify-self: end;
+                     margin-left: 0;
+                     margin-bottom: 3rem;
                  }
              }
 
-             .map-coord {
-                 grid-area: map-coord;
-                 align-self: end;
+             .engagement-section {
+                 grid-area: engagement;
                  width: min(45vw, 35rem);
-                 display: flex;
-                 flex-direction: column;
-                 justify-content: space-evenly;
+                 align-self: start;
+                 justify-self: end;
+                 margin-bottom: 2rem;
 
-                 .coordonnees {
+                 h2,
+                 p {
+                     padding-inline: 0 4rem;
+                 }
+             }
+
+             .honoraires-section {
+                 grid-area: honoraires;
+                 width: min(45vw, 35rem);
+                 align-self: start;
+                 justify-self: end;
+                 margin-bottom: 2rem;
+
+                 h2,
+                 p {
+                     padding-inline: 0 4rem;
+                 }
+             }
+
+             .domaines-section {
+                 grid-area: domaines;
+                 align-self: start;
+                 width: min(45vw, 35rem);
+
+                 h2 {
+                     padding-inline: 0 4rem;
+                 }
+
+                 .card {
                      width: min(45vw, 35rem);
-                     margin-bottom: 3rem;
-                     display: flex;
-                     justify-content: space-evenly;
+                 }
+             }
 
-                     #tel,
-                     #adresse {
-                         width: min(13rem, 18vw);
+             .contact-section {
+                 display: contents;
+
+                 .contact {
+                     grid-area: contact-title;
+                     padding-inline: 0;
+                     width: min(45vw, 35rem);
+                     justify-self: end;
+                 }
+
+                 .form {
+                     grid-area: form;
+                     width: min(45vw, 35rem);
+                     padding-inline: 0 4rem;
+                     justify-self: end;
+                     padding-bottom: 0;
+
+                     p {
+                         padding-inline: 0;
+                         text-align: center;
+                     }
+
+                     .submit {
+                         margin-bottom: 4px;
                      }
                  }
 
-                 #iframe {
+                 .map-coord {
+                     grid-area: map-coord;
+                     align-self: end;
                      width: min(45vw, 35rem);
-                     border-radius: 0.8rem;
-                     border: 3px solid var(--olive-light);
+                     display: flex;
+                     flex-direction: column;
+                     justify-content: space-evenly;
+
+                     .coordonnees {
+                         width: min(45vw, 35rem);
+                         margin-bottom: 3rem;
+                         display: flex;
+                         justify-content: space-evenly;
+
+                         #tel,
+                         #adresse {
+                             width: min(13rem, 18vw);
+                         }
+                     }
+
+                     #iframe {
+                         width: min(45vw, 35rem);
+                         border-radius: 0.8rem;
+                         border: 3px solid var(--olive-light);
+                     }
                  }
              }
          }
      }
- }
