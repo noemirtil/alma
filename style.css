@@ -736,12 +736,17 @@
                  border: solid 1px var(--olive);
                  margin-bottom: 1rem;
                  padding: 0.3rem 0.8rem 0.2rem 0.8rem;
-                 color: var(--olive-dark);
+                 color: var(--olive-black);
 
                  &::placeholder {
                      color: var(--olive-dark);
                      opacity: 0.6;
                  }
+             }
+
+             input:focus,
+             textarea:focus {
+                 outline: 2px solid var(--olive);
              }
 
              .submit {
@@ -785,7 +790,7 @@
              .adresse {
                  background-color: white;
                  color: var(--olive-black);
-                 border: solid 2px var(--olive-dark);
+                 border: solid 2px var(--olive-light);
                  width: 40vw;
                  border-radius: 0.8rem;
                  font-size: 1rem;
@@ -798,6 +803,7 @@
                      color: black;
                      transform: scale(1.04);
                      transition: all 0.1s;
+                     border: solid 2px var(--olive);
                      box-shadow: var(--shadow-elevation-medium);
                  }
              }
@@ -1006,15 +1012,18 @@
  @media screen and (min-width: 1000px) {
 
      header {
-display: flex;
-justify-content: center;
-        .header-mobile {
-            width: min(90vw, 78rem);
-        }
+         display: flex;
+         justify-content: center;
 
-        .title, #subtitle, #lang-mobile {
-            padding-left: 0;
-        }
+         .header-mobile {
+             width: min(90vw, 78rem);
+         }
+
+         .title,
+         #subtitle,
+         #lang-mobile {
+             padding-left: 0;
+         }
      }
 
      main {
@@ -1132,15 +1141,20 @@ justify-content: center;
                  width: min(45vw, 39rem);
                  padding-inline: 0 6rem;
                  justify-self: end;
+                 padding-bottom: 0;
 
                  p {
                      padding-inline: 0;
+                 }
+
+                 .submit {
+                     margin-bottom: 0;
                  }
              }
 
              .map-coord {
                  grid-area: map-coord;
-                 /* align-self: start; */
+                 align-self: end;
                  width: min(45vw, 39rem);
                  display: flex;
                  flex-direction: column;
@@ -1148,15 +1162,20 @@ justify-content: center;
 
                  .coordonnees {
                      width: min(45vw, 39rem);
+                     margin-bottom: 3rem;
+                     display: flex;
+                     justify-content: space-evenly;
 
                      #tel,
                      #adresse {
-                         width: 13rem;
+                         width: min(13rem, 18vw);
                      }
                  }
 
                  #iframe {
                      width: min(45vw, 39rem);
+                     border-radius: 0.8rem;
+                     border: 3px solid var(--olive-light);
                  }
              }
          }
