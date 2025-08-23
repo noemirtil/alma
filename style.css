@@ -96,7 +96,7 @@
      form {
          /* Improve line wrapping */
          text-wrap: balance;
-         /* text-align: justify; */
+         text-align: justify;
          overflow-wrap: break-word;
          padding: 0.5rem 5vw 0.8rem 5vw;
          list-style-type: circle;
