@@ -846,8 +846,16 @@
 
      header {
 
+        #title {
+                font-size: 1.9rem;
+                padding-top: 1.4rem;
+                line-height: 3.06rem;
+            }
+
          #subtitle {
-             top: -1vw;
+            font-size: 1.26rem;
+             top: -0.2rem;
+             padding-bottom: 0.7rem;
          }
      }
 
@@ -888,23 +896,11 @@
              display: none;
          }
 
-         #title {
-             font-size: min(2.5rem, 6.7vw);
-             padding-top: 1.4rem;
-             line-height: 3.06rem;
-         }
-
-         #subtitle {
-             font-size: min(1.64rem, 4.4vw);
-             top: -0.6rem;
-             padding-bottom: 0;
-         }
-
          #lang-mobile {
-             width: calc(19.8rem + 5vw);
+             width: 21.6rem;
 
              button {
-                 font-size: 1.4rem;
+                 font-size: 1.3rem;
              }
          }
 
