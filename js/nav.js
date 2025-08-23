@@ -11,6 +11,7 @@ const menuItems = {
     'acuueil': ['accueil-mob', 'accueil-desk'],
     'cabinet': ['cabinet-mob', 'cabinet-desk'],
     'domaines': ['domaines-mob', 'domaines-desk'],
+    'engagement': ['engagement', 'engagement-desk'],
     'honoraires': ['honoraires-mob', 'honoraires-desk'],
     'contact': ['contact-mob', 'contact-desk']
 };
@@ -45,6 +46,10 @@ window.addEventListener("load", (event) => {
                 break;
             case 'domaines-mob':
                 updateMenuStatus('domaines');
+                toggleMenu();
+                break;
+            case 'engagement-mob':
+                updateMenuStatus('engagement');
                 toggleMenu();
                 break;
             case 'honoraires-mob':

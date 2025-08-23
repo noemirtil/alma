@@ -843,8 +843,9 @@
 
          /* trick to offset the anchor scrolling navigation */
          #cabinet,
-         #honoraires,
          #domaines,
+         #engagement,
+         #honoraires,
          #contact {
              top: calc(-8rem - 11vw);
          }
