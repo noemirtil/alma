@@ -125,6 +125,7 @@
         <!-- This one is offset for scrolling -->
         <h2 class="accueil"><span id="accueil"></span></h2>
         <hr>
+        <!-- <div class="grid-left"></div> -->
         <section class="cabinet-section" id="cabinet-section">
             <h2><span id="cabinet"></span><a href="#cabinet">Le Cabinet</a></h2>
             <p>
@@ -136,11 +137,14 @@
             <h2 class="hidden">Aide juridictionnelle</h2>
             <div class="aj">
                 <h3>Le cabinet accepte de vous représenter au titre de l'<a
-                        href="https://www.formulaires.service-public.fr/gf/cerfa_16146.do">aide juridictionnelle</a>.
+                        href="https://www.formulaires.service-public.fr/gf/cerfa_16146.do">aide
+                        juridictionnelle</a>.
                 </h3>
             </div>
+            <div class="rdv-cont">
+                <button class="rdv" type="submit" id="rdv">Prendre rendez-vous</button>
+            </div>
         </section>
-        <button class="rdv" type="submit" id="rdv">Prendre rendez-vous</button>
         <section class="domaines-section" id="domaines-section">
             <h2><span id="domaines"></span><a href="#domaines">Domaines d'intervention</a></h2>
             <div class="cards-flex">
@@ -184,7 +188,8 @@
                 </div>
                 <div class="card">
                     <div class="card-head" id="graduate-head">
-                        <img class="graduate" src="img/graduate.svg" alt="Symbole d'une toque de diplômé·e" class="graduate">
+                        <img class="graduate" src="img/graduate.svg" alt="Symbole d'une toque de diplômé·e"
+                            class="graduate">
                         <h3>NATIONALITÉ</h3>
                     </div>
                     <h3 class="naturalisation">ET NATURALISATION</h3>
@@ -199,11 +204,13 @@
         <section class="engagement-section" id="engagement-section">
             <h2><span id="engagement"></span><a href="#engagement">Mon engagement</a></h2>
             <p>
-                Après plusieurs années de bénévolat à Barcelone auprès de personnes migrantes en situation de grande vulnérabilité<br>
+                Après plusieurs années de bénévolat à Barcelone auprès de personnes migrantes en situation de grande
+                vulnérabilité<br>
                 - en particulier des demandeurs d'asile et des mineurs non accompagnés -<br>
                 j'ai poursuivi mon parcours en France avec un Master en migrations, droit international et européen,
                 où je me suis également engagée au sein d'ONGs comme La Cimade et Amnesty International.<br>
-                Ces expériences ont façonné ma manière d'exercer : avec rigueur, humanité et la conviction que mon activité d'avocate
+                Ces expériences ont façonné ma manière d'exercer : avec rigueur, humanité et la conviction que mon
+                activité d'avocate
                 doit être mise au service de l'accès effectif aux droits.
             </p>
         </section>
@@ -212,7 +219,8 @@
             <h2><span id="honoraires"></span><a href="#honoraires">Honoraires</a></h2>
             <p>
                 Le cabinet accepte de vous représenter à l'<a
-                    href="https://www.formulaires.service-public.fr/gf/cerfa_16146.do">aide juridictionnelle</a>, totale
+                    href="https://www.formulaires.service-public.fr/gf/cerfa_16146.do">aide juridictionnelle</a>,
+                totale
                 ou partielle.
                 Sinon, une convention d'honoraires est établie de façon consensuelle.
                 <br>En cas de dépôt de dossier au cabinet,<br>Maître NEBOT ILLAN offre la première consultation.
@@ -225,8 +233,8 @@
             <div id="result"></div>
         </div>
         <section class="contact-section" id="contact-section">
-            <h2><span id="contact"></span><a href="#contact">Contact</a></h2>
-            <form id="form" method="POST">
+            <h2 class="contact"><span id="contact"></span><a href="#contact">Contact</a></h2>
+            <form id="form" class="form" method="POST">
                 <input type="hidden" name="access_key" value="a9ec7a55-812a-4d24-bb69-b63898fc37f6">
                 <label for="nom" class="nom">Nom *</label>
                 <br>
@@ -258,13 +266,13 @@
             </form>
             <div class="map-coord">
                 <div class="coordonnees" id="coordonnees">
-                    <a href="tel:+33783358446"><button class="tel">Téléphone :<br>(+33)<br>07 83 35 84
+                    <a href="tel:+33783358446"><button class="tel" id="tel">Téléphone :<br>(+33)<br>07 83 35 84
                             46</button></a>
-                    <a href="https://maps.app.goo.gl/SxtZ29cjpPp854Nb8"><button class="adresse">
+                    <a href="https://maps.app.goo.gl/SxtZ29cjpPp854Nb8"><button class="adresse" id="adresse">
                             Adresse :<br>8 rue de l'Echelle,<br>75001 Paris</button></a>
                 </div>
                 <div class="map">
-                    <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                    <iframe id="iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
                         src="https://maps.google.com/maps?hl=fr&amp;q=8%20rue%20de%20l%E2%80%99Echelle,%2075001%20Paris&amp;t=m&amp;z=13&amp;ie=UTF8&amp;iwloc=addr&amp;output=embed"></iframe>
                 </div>
             </div>
