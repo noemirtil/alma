@@ -1,9 +1,13 @@
 //#MARK: Translations
 const translations = {
     esp: {
-        // "drop-lang-btn": "Español",
-        // "home-mob": "Inicio",
-        // "contact-mob": "Contacto",
+        "subtitle": "Abogada en París y Barcelona",
+        "accueil-mob": "Inicio",
+        "cabinet-mob": "El despacho",
+        "domaines-mob": "Servivios",
+        "engagement-mob": "Mi compromiso",
+        "honoraires-mob": "Honorarios",
+        "contact-mob": "Contacto",
         // "home-desk": "Inicio",
         // "contact-desk": "Contacto",
         // "contact-title": "Contacto",
@@ -17,8 +21,13 @@ const translations = {
         "result3": `<p>Algo no ha salido bien, lo siento</p>`,
     },
     fra: {
-        // "drop-lang-btn": "Français",
-        // "home-mob": "Accueil",
+        "subtitle": "Avocate à Paris et Barcelone",
+        "accueil-mob": "Accueil",
+        "cabinet-mob": "Le cabinet",
+        "domaines-mob": "Domaines<br>d'intervention",
+        "engagement-mob": "Mon engagement",
+        "honoraires-mob": "Honoraires",
+        "contact-mob": "Contact",
         // "contact-mob": "Contact",
         // "home-desk": "Accueil",
         // "contact-desk": "Contact",
@@ -33,8 +42,13 @@ const translations = {
         "result3": "<p>Quelque chose n'a pas fonctionné, désolée...</p>",
     },
     eng: {
-        // "drop-lang-btn": "English",
-        // "home-mob": "Home",
+        "subtitle": "Lawyer in Paris and Barcelona",
+        "accueil-mob": "Home",
+        "cabinet-mob": "The firm",
+        "domaines-mob": "Services",
+        "engagement-mob": "My commitment",
+        "honoraires-mob": "Fees",
+        "contact-mob": "Contact",
         // "contact-mob": "Contact",
         // "home-desk": "Home",
         // "contact-desk": "Contact",
@@ -56,8 +70,13 @@ const translate = () => {
         document.getElementById(value).innerHTML = translations[language][value];
     }
     // elements to translate
-    // t9n("drop-lang-btn");
-    // t9n("home-mob");
+    t9n("subtitle");
+    t9n("accueil-mob");
+    t9n("cabinet-mob");
+    t9n("domaines-mob");
+    t9n("engagement-mob");
+    t9n("honoraires-mob");
+    t9n("contact-mob");
     // t9n("contact-mob");
     // t9n("home-desk");
     // t9n("contact-title");
