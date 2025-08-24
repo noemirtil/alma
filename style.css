@@ -917,6 +917,15 @@
 
      main {
 
+        /* trick to offset the anchor scrolling navigation */
+            #cabinet,
+            #domaines,
+            #engagement,
+            #honoraires,
+            #contact {
+                top: -10rem;
+            }
+
          .accueil-section {
              display: grid;
              grid-template-columns: 45vw 45vw;
@@ -1101,15 +1110,6 @@
              " . honoraires domaines . "
              " . contact-title domaines . "
              " . form map-coord . ";
-
-         /* trick to offset the anchor scrolling navigation */
-         #cabinet,
-         #domaines,
-         #engagement,
-         #honoraires,
-         #contact {
-             top: -10rem;
-         }
 
          hr {
              display: none;

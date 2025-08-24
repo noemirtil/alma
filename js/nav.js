@@ -8,11 +8,11 @@ const toggleMenu = () => {
 }
 
 const menuItems = {
-    'acuueil': ['accueil-mob', 'accueil-desk'],
-    'cabinet': ['cabinet-mob', 'cabinet-desk'],
-    'domaines': ['domaines-mob', 'domaines-desk'],
-    'engagement': ['engagement', 'engagement-desk'],
-    'honoraires': ['honoraires-mob', 'honoraires-desk'],
+    'accueil': ['accueil-mob', 'accueil-desk'],
+    'cabinet': ['cabinet-mob'],
+    'domaines': ['domaines-mob'],
+    'engagement': ['engagement-mob', 'engagement-desk'],
+    'honoraires': ['honoraires-mob'],
     'contact': ['contact-mob', 'contact-desk']
 };
 
@@ -62,29 +62,19 @@ window.addEventListener("load", (event) => {
                 break;
         }
     });
-    // document.getElementById("menu-section").addEventListener('click', (e) => {
-    //     let target = e.target;
-    //     switch (target.id) {
-    //         case 'home-desk':
-    //             document.getElementById("homegrid").style.display = "grid";
-    //             document.getElementById("pro-page").style.display = "none";
-    //             window.scrollTo({ top: 0, behavior: "smooth" });
-    //             updateMenuStatus('home');
-    //             break;
-    //         case 'pro-desk':
-    //             document.getElementById("homegrid").style.display = "none";
-    //             document.getElementById("pro-page").style.display = "flex";
-    //             window.scrollTo({ top: 0, behavior: "smooth" });
-    //             updateMenuStatus('pro');
-    //             break;
-    //         case 'contact-desk':
-    //             window.scrollTo({
-    //                 top: document.body.scrollHeight,
-    //                 behavior: 'smooth'
-    //             });
-    //             updateMenuStatus('contact');
-    //             break;
-    //     }
-    // });
+    document.getElementById("menu-desktop").addEventListener('click', (e) => {
+        let target = e.target;
+        switch (target.id) {
+            case 'accueil-desk':
+                updateMenuStatus('accueil');
+                break;
+            case 'engagement-desk':
+                updateMenuStatus('engagement');
+                break;
+            case 'contact-desk':
+                updateMenuStatus('contact');
+                break;
+        }
+    });
 });
 
