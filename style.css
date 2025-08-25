@@ -330,7 +330,7 @@
          }
      }
 
-     .header-mobile {
+     .header-cont {
          backdrop-filter: blur(8px);
 
          .burger {
@@ -651,8 +651,10 @@
              border: solid 3px var(--olive-light);
              margin-bottom: 1.6rem;
 
-             /* & h3,
-             & h4, */
+             h3 {
+                padding-right: 0;
+             }
+
              & ul {
                  padding-left: 2rem;
 
@@ -917,14 +919,14 @@
 
      main {
 
-        /* trick to offset the anchor scrolling navigation */
-            #cabinet,
-            #domaines,
-            #engagement,
-            #honoraires,
-            #contact {
-                top: -10rem;
-            }
+         /* trick to offset the anchor scrolling navigation */
+         #cabinet,
+         #domaines,
+         #engagement,
+         #honoraires,
+         #contact {
+             top: -10rem;
+         }
 
          .accueil-section {
              display: grid;
@@ -1026,7 +1028,7 @@
          display: flex;
          justify-content: center;
 
-         .header-mobile {
+         .header-cont {
              width: min(90vw, 70rem);
          }
 
@@ -1222,9 +1224,9 @@
                      text-align: center;
                  }
 
-                 .submit {
+                 /* .submit {
                      margin-bottom: 4px;
-                 }
+                 } */
              }
 
              .map-coord {
@@ -1251,6 +1253,7 @@
                      width: min(45vw, 35rem);
                      border-radius: 0.8rem;
                      border: 3px solid var(--olive-light);
+                     margin-bottom: 2rem;
                  }
              }
          }
