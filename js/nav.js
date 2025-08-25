@@ -1,5 +1,4 @@
 // Built by Noemie Baudouin https://github.com/noemirtil
-// Mobile navigation
 const toggleMenu = () => {
     document.getElementById("nav-mobile").classList.toggle("show-mob");
     document.getElementById("shadow").classList.toggle("show-mob");
@@ -79,3 +78,61 @@ window.addEventListener("load", (event) => {
     });
 });
 
+// updateMenuStatus on scroll
+let viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+
+document.addEventListener('DOMContentLoaded', (e) => {
+    window.addEventListener('scroll', function () {
+        if (viewportWidth < 450) {
+            if (window.pageYOffset < 40) {
+                updateMenuStatus('accueil');
+            }
+            if (window.pageYOffset > 300 && window.pageYOffset < 450) {
+                updateMenuStatus('cabinet');
+            }
+            if (window.pageYOffset > 450 && window.pageYOffset < 1900) {
+                updateMenuStatus('domaines');
+            }
+            if (window.pageYOffset > 1900 && window.pageYOffset < 2300) {
+                updateMenuStatus('engagement');
+            }
+            if (window.pageYOffset > 2500 && window.pageYOffset < 2800) {
+                updateMenuStatus('honoraires');
+            }
+            if (window.pageYOffset > 2800) {
+                updateMenuStatus('contact');
+            }
+        }
+        if (viewportWidth >= 450 && viewportWidth <= 1000) {
+            if (window.pageYOffset < 40) {
+                updateMenuStatus('accueil');
+            }
+            if (window.pageYOffset > 200 && window.pageYOffset < 450) {
+                updateMenuStatus('cabinet');
+            }
+            if (window.pageYOffset > 450 && window.pageYOffset < 1600) {
+                updateMenuStatus('domaines');
+            }
+            if (window.pageYOffset > 1600 && window.pageYOffset < 2100) {
+                updateMenuStatus('engagement');
+            }
+            if (window.pageYOffset > 2100 && window.pageYOffset < 2500) {
+                updateMenuStatus('honoraires');
+            }
+            if (window.pageYOffset > 2500) {
+                updateMenuStatus('contact');
+            }
+        }
+        if (viewportWidth > 1000) {
+            if (window.pageYOffset < 40) {
+                updateMenuStatus('accueil');
+            }
+            if (window.pageYOffset > 600 && window.pageYOffset < 1000) {
+                updateMenuStatus('engagement');
+            }
+            if (window.pageYOffset > 1300) {
+                updateMenuStatus('contact');
+            }
+        }
+    });
+});

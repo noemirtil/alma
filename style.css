@@ -404,10 +404,11 @@
              position: relative;
              z-index: 1;
 
-             button {
+             a {
                  background-color: transparent;
                  color: black;
                  font-weight: 500;
+                font-family: system-ui, Arial;
                  font-size: max(1rem, 3.5vw);
                  padding: 0.1rem;
                  border: none;
@@ -458,7 +459,7 @@
          }
 
          .lang-mobile-hidden {
-             button {
+             a {
                  color: white;
 
                  &.current-page {
@@ -804,6 +805,7 @@
 
              .tel,
              .adresse {
+                 text-align: center;
                  background-color: white;
                  color: var(--olive-black);
                  border: solid 2px var(--olive-light);
@@ -922,7 +924,7 @@
              width: 21.6rem;
              padding-bottom: 1rem;
 
-             button {
+             a {
                  font-size: 1.3rem;
              }
          }
