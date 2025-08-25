@@ -1,23 +1,23 @@
 // Built by Noemie Baudouin https://github.com/noemirtil
 //#MARK: Translations
 const translations = {
-    esp: {
+    es: {
         // "submit": `Enviar&nbsp;&nbsp;&nbsp;<img class="arrow" src="img/arrow.svg" class= "reverse" alt="Icono enviar" >`,
-        "result1": "<p>Enviando tu mensaje...</p>",
-        "result2": `<p>¡Gracias por tu mensaje!\n\nTe responderé en cuanto pueda</p>`,
+        "result1": "<p>Enviando su mensaje...</p>",
+        "result2": `<p>¡Gracias por su mensaje!\n\nLe responderé cuanto antes</p>`,
         "result3": `<p>Algo no ha salido bien, lo siento</p>`,
     },
-    fra: {
+    fr: {
         // "submit": `Envoyer&nbsp;&nbsp;&nbsp;<img class="arrow" src="img/arrow.svg" class= "reverse" alt="Icono enviar" >`,
         "result1": "<p>Envoi du message en cours...</p>",
-        "result2": `<p>Merci pour ton message!\n\nJe te répondrai\ndès que possible</p>`,
-        "result3": "<p>Quelque chose n'a pas fonctionné, désolée...</p>",
+        "result2": `<p>Merci pour votre message!\n\nJe vous répondrai\ndès que possible</p>`,
+        "result3": "<p>Quelque chose n'a pas fonctionné, désolée</p>",
     },
-    eng: {
+    en: {
         // "submit": `Send&nbsp;&nbsp;&nbsp;<img class="arrow" src="img/arrow.svg" class= "reverse" alt="Icono enviar" >`,
         "result1": "<p>Sending your message...</p>",
-        "result2": `<p>Thanks for your message!\n\nI'll get in touch asap</p>`,
-        "result3": "<p>Something went wrong, sorry...</p>",
+        "result2": `<p>Thanks for your message!\n\nI'll get in touch as soon as possible</p>`,
+        "result3": "<p>Something went wrong, sorry</p>",
     },
 };
 
@@ -30,59 +30,44 @@ const translate = () => {
     // t9n("submit");
 }
 
-
 // set language
-let language = "fra";
-if (localStorage.getItem('langPref')) {
-    language = localStorage.getItem('langPref');
-    translate();
-}
-window.addEventListener("load", (event) => {
-    event.preventDefault();
-    document.getElementById("lang-mobile").addEventListener('click', (e) => {
-        let target = e.target;
-        switch (target.id) {
-            case 'esp-mob':
-                language = "esp";
-                translate();
-                updateLangStatus('esp');
-                localStorage.setItem('langPref', 'esp');
-                break;
-            case 'fra-mob':
-                language = "fra";
-                translate();
-                updateLangStatus('fra');
-                localStorage.setItem('langPref', 'fra');
-                break;
-            case 'eng-mob':
-                language = "eng";
-                translate();
-                updateLangStatus('eng');
-                localStorage.setItem('langPref', 'eng');
-                break;
-        }
-    });
-});
+let language = document.getElementsByTagName("html")[0].getAttribute("lang");
+// window.addEventListener("load", (event) => {
+//     event.preventDefault();
+//     document.getElementById("lang-set").addEventListener('click', (e) => {
+//         let target = e.target;
+//         switch (target.id) {
+//             case 'espanol':
+//                 // language = "es";
+//                 translate();
+//                 updateLangStatus('espanol');
+//                 console.log(language);
+//                 break;
+//             case 'francais':
+//                 // language = "fr";
+//                 translate();
+//                 updateLangStatus('francais');
+//                 console.log(language);
+//                 break;
+//             case 'english':
+//                 // language = "en";
+//                 translate();
+//                 updateLangStatus('english');
+//                 console.log(language);
+//                 break;
+//         }
+//     });
+// });
 
-//#region Language status
-const langItems = {
-    'esp': ['esp-mob', 'esp-desk'],
-    'fra': ['fra-mob', 'fra-desk'],
-    'eng': ['eng-mob', 'eng-desk']
-};
-
-const updateLangStatus = (currentLang) => {
-    Object.keys(langItems).forEach(lang => {
-        langItems[lang].forEach(item => {
-            if (lang === currentLang) {
-                document.getElementById(item).classList.add("current-page");
-                document.getElementById(item).classList.remove("current-not");
-            } else {
-                document.getElementById(item).classList.add("current-not");
-                document.getElementById(item).classList.remove("current-page");
-            }
-        });
-    });
-}
-//#endregion
+// const langItems = ['espanol', 'francais', 'english'];
+// const updateLangStatus = (currentLang) => {
+//     document.getElementById(currentLang).classList.add("current-page");
+//     document.getElementById(currentLang).classList.remove("current-not");
+//     langItems.forEach(lang => {
+//         if (lang != currentLang) {
+//             document.getElementById(lang).classList.add("current-not");
+//             document.getElementById(lang).classList.remove("current-page");
+//         }
+//     })
+// }
 

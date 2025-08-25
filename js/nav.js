@@ -4,7 +4,7 @@ const toggleMenu = () => {
     document.getElementById("shadow").classList.toggle("show-mob");
     document.getElementById("burger").classList.toggle("burger--open");
     document.getElementById("heading").classList.toggle("heading-hidden");
-    document.getElementById("lang-mobile").classList.toggle("lang-mobile-hidden");
+    document.getElementById("lang-set").classList.toggle("lang-set-hidden");
 }
 
 const menuItems = {
@@ -62,7 +62,7 @@ window.addEventListener("load", (event) => {
                 break;
         }
     });
-    document.getElementById("menu-desktop").addEventListener('click', (e) => {
+    document.getElementById("nav-desktop").addEventListener('click', (e) => {
         let target = e.target;
         switch (target.id) {
             case 'accueil-desk':
