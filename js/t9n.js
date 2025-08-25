@@ -1,3 +1,4 @@
+// Built by Noemie Baudouin https://github.com/noemirtil
 //#MARK: Translations
 const translations = {
     esp: {

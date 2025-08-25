@@ -652,7 +652,7 @@
              margin-bottom: 1.6rem;
 
              h3 {
-                padding-right: 0;
+                 padding-right: 0;
              }
 
              & ul {
@@ -683,9 +683,13 @@
 
                  .airplane {
                      width: 4.5rem;
-
                      transform:
-                         translateY(1rem) translateX(0.5rem) rotate(-45deg);
+                         translateY(1rem) translateX(0.2rem) rotate(-45deg);
+                 }
+
+                 .es-airplane {
+                    transform:
+                            translateY(2rem) translateX(0.2rem) rotate(-45deg);
                  }
 
                  .earth,
@@ -701,13 +705,12 @@
                  h3 {
                      position: relative;
                      top: calc(1.2rem - 1.6vw);
-                     /* top: 0.7rem; */
                      font-size: max(1.1rem, 3.6vw);
                      padding-left: 0.4rem
                  }
 
                  .eloignement {
-                     padding-left: 1.2rem;
+                     padding-left: 1rem;
                  }
 
 
@@ -721,9 +724,15 @@
                  padding: 0;
              }
 
-             .naturalisation {
+             .naturalisation,
+             .forzosa {
                  padding: 0 0 0.5rem 5.5rem;
-                 font-size: max(1rem, 3.6vw);
+                 font-size: max(1.1rem, 3.6vw);
+             }
+
+             .forzosa {
+                transform:
+                        translateY(-0.2rem);
              }
          }
      }
@@ -986,7 +995,8 @@
                  font-size: 1.3rem;
              }
 
-             .naturalisation {
+             .naturalisation,
+             .forzosa {
                  font-size: 1.4rem;
              }
          }

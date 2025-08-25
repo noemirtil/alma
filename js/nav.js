@@ -1,3 +1,4 @@
+// Built by Noemie Baudouin https://github.com/noemirtil
 // Mobile navigation
 const toggleMenu = () => {
     document.getElementById("nav-mobile").classList.toggle("show-mob");
