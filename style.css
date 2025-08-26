@@ -845,7 +845,7 @@
              }
 
              .lgbt {
-                 height: 2.6rem;
+                 height: 2.55rem;
                  width: auto;
                  padding: 0.22rem;
              }
@@ -1287,7 +1287,6 @@
                      width: min(45vw, 35rem);
                      border-radius: 0.8rem;
                      border: 3px solid var(--olive-light);
-                     /* margin-bottom: 2rem; */
                  }
              }
          }
