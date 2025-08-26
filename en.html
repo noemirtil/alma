@@ -205,30 +205,30 @@
             <h2 class="contact"><span id="contact"></span><a href="#contact">Contact</a></h2>
             <form id="form" class="form" method="POST">
                 <input type="hidden" name="access_key" value="a9ec7a55-812a-4d24-bb69-b63898fc37f6">
-                <label for="prenom" class="prenom">Name *</label>
+                <label for="prenom" class="prenom" id="prenom-label">Name *</label>
                 <br>
-                <input type="text" id="prenom" name="prenom" placeholder="Mandatory" required minlength="">
+                <input type="text" id="prenom" onblur="checkPrenom()" name="prenom" placeholder="Mandatory" autofocus required maxlength="40">
                 <br>
-                <label for="nom" class="nom">Surname *</label>
+                <label for="nom" class="nom" id="nom-label">Surname *</label>
                 <br>
-                <input type="text" id="nom" name="nom" placeholder="Mandatory">
+                <input type="text" id="nom" onblur="checkNom()" name="nom" placeholder="Mandatory" required maxlength="80">
                 <br>
                 <label for="email" class="email" id="email-label">Email *</label>
                 <br>
-                <input type="email" id="email" name="email" placeholder="Mandatory" onblur="confirmEmail()" required minlength="6">
+                <input type="email" id="email" name="email" placeholder="Mandatory" onblur="confirmEmail()" required minlength="6" maxlength="320">
                 <input type="email" id="email-confirm" name="email-confirm" placeholder="Confirm the email *"
-                    onblur="confirmEmail()" required minlength="6">
+                    onblur="confirmEmail()" required minlength="6" maxlength="320">
                 <br>
-                <label for="telephone" class="telephone">Phone</label>
+                <label for="telephone" class="telephone" id="tel-label">Phone</label>
                 <br>
-                <input type="tel" id="telephone" name="telephone" placeholder="Optional">
+                <input type="tel" id="telephone" onblur="checkTel()" name="telephone" placeholder="Optional" minlength="3" maxlength="40">
                 <br>
-                <label for="message" class="message">Message *</label>
+                <label for="message" class="message" id="message-label">Message *</label>
                 <br>
-                <textarea rows="6" id="message" name="message" placeholder="Mandatory" required></textarea>
+                <textarea rows="6" id="message" onblur="checkMessage()" name="message" placeholder="Mandatory" required maxlength="1000"></textarea>
                 <br>
-                <label for="consent" id="consent">Tick the box *</label>
-                <input type="checkbox" class="consent" name="consent" required>
+                <label for="consent" id="consent-label">Tick the box *</label>
+                <input type="checkbox" class="consent" id="consent" onblur="checkConsent()" name="consent" required>
                 <p>I agree that the information provided will be used solely to
                     contact me regarding my request. This data will not be
                     stored or shared with third parties.</p>
@@ -269,6 +269,6 @@
 
     <script src="js/nav.js"></script>
     <script src="js/t9n.js"></script>
-    <script src="js/apps.js"></script>
+    <script src="js/form.js"></script>
 
 </body>

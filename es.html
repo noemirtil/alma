@@ -212,25 +212,25 @@
                 <input type="hidden" name="access_key" value="a9ec7a55-812a-4d24-bb69-b63898fc37f6">
                 <label for="prenom" class="prenom">Nombre *</label>
                 <br>
-                <input type="text" id="prenom" name="prenom" placeholder="Requerido" required>
+                <input type="text" id="prenom" name="prenom" placeholder="Requerido" autofocus required maxlength="40">
                 <br>
                 <label for="nom" class="nom">Apellidos *</label>
                 <br>
-                <input type="text" id="nom" name="nom" placeholder="Requerido">
+                <input type="text" id="nom" name="nom" placeholder="Requerido" required maxlength="80">
                 <br>
                 <label for="email" class="email" id="email-label">Correo electrónico *</label>
                 <br>
-                <input type="email" id="email" name="email" placeholder="Requerido" onblur="confirmEmail()" required minlength="6">
+                <input type="email" id="email" name="email" placeholder="Requerido" onblur="confirmEmail()" required minlength="6" maxlength="320">
                 <input type="email" id="email-confirm" name="email-confirm" placeholder="Confirmar el correo electrónico *"
-                    onblur="confirmEmail()" required minlength="6">
+                    onblur="confirmEmail()" required minlength="6" maxlength="320">
                 <br>
-                <label for="telephone" class="telephone">Teléfono</label>
+                <label for="telephone" class="telephone" id="tel-label">Teléfono</label>
                 <br>
-                <input type="tel" id="telephone" name="telephone" placeholder="Opcional">
+                <input type="tel" id="telephone" onblur="checkTel()" name="telephone" placeholder="Opcional" minlength="3" maxlength="40">
                 <br>
                 <label for="message" class="message">Mensaje *</label>
                 <br>
-                <textarea rows="6" id="message" name="message" placeholder="Requerido" required></textarea>
+                <textarea rows="6" id="message" name="message" placeholder="Requerido" required maxlength="1000"></textarea>
                 <br>
                 <label for="consent" id="consent">Marque la casilla *</label>
                 <input type="checkbox" class="consent" name="consent" required>
@@ -274,6 +274,6 @@
 
     <script src="js/nav.js"></script>
     <script src="js/t9n.js"></script>
-    <script src="js/apps.js"></script>
+    <script src="js/form.js"></script>
 
 </body>

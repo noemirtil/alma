@@ -212,25 +212,25 @@
                 <input type="hidden" name="access_key" value="a9ec7a55-812a-4d24-bb69-b63898fc37f6">
                 <label for="prenom" class="prenom">Prénom *</label>
                 <br>
-                <input type="text" id="prenom" name="prenom" placeholder="Obligatoire" required>
+                <input type="text" id="prenom" name="prenom" placeholder="Obligatoire" autofocus required maxlength="40">
                 <br>
                 <label for="nom" class="nom">Nom *</label>
                 <br>
-                <input type="text" id="nom" name="nom" placeholder="Obligatoire">
+                <input type="text" id="nom" name="nom" placeholder="Obligatoire" required maxlength="80">
                 <br>
                 <label for="email" class="email" id="email-label">Adresse email *</label>
                 <br>
-                <input type="email" id="email" name="email" placeholder="Obligatoire" onblur="confirmEmail()" required minlength="6">
+                <input type="email" id="email" name="email" placeholder="Obligatoire" onblur="confirmEmail()" required minlength="6" maxlength="320">
                 <input type="email" id="email-confirm" name="email-confirm" placeholder="Confirmer l'adresse email *"
-                    onblur="confirmEmail()" required minlength="6">
+                    onblur="confirmEmail()" required minlength="6" maxlength="320">
                 <br>
-                <label for="telephone" class="telephone">Téléphone</label>
+                <label for="telephone" class="telephone" id="tel-label">Téléphone</label>
                 <br>
-                <input type="tel" id="telephone" name="telephone" placeholder="Facultatif">
+                <input type="tel" id="telephone" onblur="checkTel()" name="telephone" placeholder="Facultatif" minlength="3" maxlength="40">
                 <br>
                 <label for="message" class="message">Message *</label>
                 <br>
-                <textarea rows="6" id="message" name="message" placeholder="Obligatoire" required></textarea>
+                <textarea rows="6" id="message" name="message" placeholder="Obligatoire" required maxlength="1000"></textarea>
                 <br>
                 <label for="consent" id="consent">Cocher la case *</label>
                 <input type="checkbox" class="consent" name="consent" required>
@@ -274,6 +274,6 @@
 
     <script src="js/nav.js"></script>
     <script src="js/t9n.js"></script>
-    <script src="js/apps.js"></script>
+    <script src="js/form.js"></script>
 
 </body>

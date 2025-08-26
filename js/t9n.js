@@ -3,6 +3,9 @@
 const translations = {
     es: {
         // "submit": `Enviar&nbsp;&nbsp;&nbsp;<img class="arrow" src="img/arrow.svg" class= "reverse" alt="Icono enviar" >`,
+        "tel": "Teléfono",
+        "rightTel": "Teléfono ✓",
+        "wrongTel": "Ingrese un número válido por favor",
         "rightEmail": "Correo electrónico ✓",
         "wrongEmail": "El correo de confirmación debe coincidir",
         "result1": "<p>Enviando su mensaje...</p>",
@@ -11,6 +14,9 @@ const translations = {
     },
     fr: {
         // "submit": `Envoyer&nbsp;&nbsp;&nbsp;<img class="arrow" src="img/arrow.svg" class= "reverse" alt="Icono enviar" >`,
+        "tel": "Téléphone",
+        "rightTel": "Téléphone ✓",
+        "wrongTel": "Insérer un numéro valide SVP",
         "rightEmail": "Adresse email ✓",
         "wrongEmail": "L'email de confirmation doit correspondre",
         "result1": "<p>Envoi du message en cours...</p>",
@@ -19,6 +25,9 @@ const translations = {
     },
     en: {
         // "submit": `Send&nbsp;&nbsp;&nbsp;<img class="arrow" src="img/arrow.svg" class= "reverse" alt="Icono enviar" >`,
+        "tel": "Phone",
+        "rightTel": "Phone ✓",
+        "wrongTel": "Please enter a valid phone number",
         "rightEmail": "Email ✓",
         "wrongEmail": "The confirmation email has to match",
         "result1": "<p>Sending your message...</p>",
