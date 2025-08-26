@@ -111,7 +111,8 @@
                 </h3>
             </div>
             <div class="rdv-cont">
-                <a href="https://consultation.avocat.fr/avocat-paris/alma-nebot-illan-59397.html" target="_blank" rel="noopener noreferrer" class="rdv" id="rdv">Book an appointment</a>
+                <a href="https://consultation.avocat.fr/avocat-paris/alma-nebot-illan-59397.html" target="_blank"
+                    rel="noopener noreferrer" class="rdv" id="rdv">Book an appointment</a>
             </div>
         </section>
         <section class="domaines-section" id="domaines-section">
@@ -212,9 +213,11 @@
                 <br>
                 <input type="text" id="nom" name="nom" placeholder="Mandatory">
                 <br>
-                <label for="email" class="email">Email *</label>
+                <label for="email" class="email" id="email-label">Email *</label>
                 <br>
-                <input type="email" id="email" name="email" placeholder="Mandatory" required>
+                <input type="email" id="email" name="email" placeholder="Mandatory" onblur="confirmEmail()" required minlength="6">
+                <input type="email" id="email-confirm" name="email-confirm" placeholder="Confirm the email *"
+                    onblur="confirmEmail()" required minlength="6">
                 <br>
                 <label for="telephone" class="telephone">Phone</label>
                 <br>
@@ -236,17 +239,18 @@
                 <div class="coordonnees" id="coordonnees">
                     <a href="tel:+33783358446" class="tel" id="tel">Phone :<br>(+33)<br>07 83 35 84 46</a>
                     <a href="https://maps.app.goo.gl/SxtZ29cjpPp854Nb8" class="adresse" id="adresse">
-                            Address :<br>8 rue de l'Échelle,<br>75001 Paris</a>
+                        Address :<br>8 rue de l'Échelle,<br>75001 Paris</a>
                 </div>
                 <div class="map">
                     <iframe id="iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
                         src="https://maps.google.com/maps?hl=en&amp;q=8%20rue%20de%20l%E2%80%99Echelle,%2075001%20Paris&amp;t=m&amp;z=13&amp;ie=UTF8&amp;iwloc=addr&amp;output=embed"></iframe>
                 </div>
-            </div>
-            <div class="symbols">
-                <a href="https://www.linkedin.com/in/alma-nebot/"><img src="img/linkedin.svg" alt="Link to my LinkedIn account"
-                        class="linkedin"></a>
-                <a href="https://www.linkedin.com/in/alma-nebot/"><img src="img/lgbt.png" alt="LGBT symbol" class="lgbt"></a>
+                <div class="symbols">
+                    <a href="https://www.linkedin.com/in/alma-nebot/"><img src="img/linkedin.svg"
+                            alt="Link to my LinkedIn account" class="linkedin"></a>
+                    <a href="https://www.linkedin.com/in/alma-nebot/"><img src="img/lgbt.png" alt="LGBT symbol"
+                            class="lgbt"></a>
+                </div>
             </div>
         </section>
 

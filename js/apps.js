@@ -3,6 +3,20 @@
 const form = document.getElementById('form');
 const resultId = document.getElementById('result');
 
+const confirmEmail = () => {
+    let email = document.getElementById("email").value;
+    let confemail = document.getElementById("email-confirm").value;
+    if (email != confemail) {
+        document.getElementById("email-label").style.color = "red";
+        document.getElementById("email-label").innerHTML = translations[language]["wrongEmail"];
+        console.log("wrong");
+    }
+    else {
+        document.getElementById("email-label").style.color = "black";
+        document.getElementById("email-label").innerHTML = translations[language]["rightEmail"];
+    }
+}
+
 form.addEventListener('submit', function (e) {
     e.preventDefault();
     const formData = new FormData(form);

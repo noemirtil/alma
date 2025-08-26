@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <!-- Built by Noemie Baudouin https://github.com/noemirtil -->
+<!-- Built by Noemie Baudouin https://github.com/noemirtil -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -111,7 +112,8 @@
                 </h3>
             </div>
             <div class="rdv-cont">
-                <a href="https://consultation.avocat.fr/avocat-paris/alma-nebot-illan-59397.html" target="_blank" rel="noopener noreferrer" class="rdv" id="rdv">Prendre rendez-vous</a>
+                <a href="https://consultation.avocat.fr/avocat-paris/alma-nebot-illan-59397.html" target="_blank"
+                    rel="noopener noreferrer" class="rdv" id="rdv">Prendre rendez-vous</a>
             </div>
         </section>
         <section class="domaines-section" id="domaines-section">
@@ -216,9 +218,11 @@
                 <br>
                 <input type="text" id="nom" name="nom" placeholder="Obligatoire">
                 <br>
-                <label for="email" class="email">Adresse mail *</label>
+                <label for="email" class="email" id="email-label">Adresse email *</label>
                 <br>
-                <input type="email" id="email" name="email" placeholder="Obligatoire" required>
+                <input type="email" id="email" name="email" placeholder="Obligatoire" onblur="confirmEmail()" required minlength="6">
+                <input type="email" id="email-confirm" name="email-confirm" placeholder="Confirmer l'adresse email *"
+                    onblur="confirmEmail()" required minlength="6">
                 <br>
                 <label for="telephone" class="telephone">Téléphone</label>
                 <br>
@@ -240,16 +244,18 @@
                 <div class="coordonnees" id="coordonnees">
                     <a href="tel:+33783358446" class="tel" id="tel">Téléphone :<br>(+33)<br>07 83 35 84 46</a>
                     <a href="https://maps.app.goo.gl/SxtZ29cjpPp854Nb8" class="adresse" id="adresse">
-                            Adresse :<br>8 rue de l'Échelle,<br>75001 Paris</a>
+                        Adresse :<br>8 rue de l'Échelle,<br>75001 Paris</a>
                 </div>
                 <div class="map">
                     <iframe id="iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
                         src="https://maps.google.com/maps?hl=fr&amp;q=8%20rue%20de%20l%E2%80%99Echelle,%2075001%20Paris&amp;t=m&amp;z=13&amp;ie=UTF8&amp;iwloc=addr&amp;output=embed"></iframe>
                 </div>
-            </div>
-            <div class="symbols">
-                <a href="https://www.linkedin.com/in/alma-nebot/"><img src="img/linkedin.svg" alt="Lien vers mon compte LinkedIn" class="linkedin"></a>
-                <a href="https://www.linkedin.com/in/alma-nebot/"><img src="img/lgbt.png" alt="Symbole LGBT" class="lgbt"></a>
+                <div class="symbols">
+                    <a href="https://www.linkedin.com/in/alma-nebot/"><img src="img/linkedin.svg"
+                            alt="Lien vers mon compte LinkedIn" class="linkedin"></a>
+                    <a href="https://www.linkedin.com/in/alma-nebot/"><img src="img/lgbt.png" alt="Symbole LGBT"
+                            class="lgbt"></a>
+                </div>
             </div>
         </section>
 

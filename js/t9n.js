@@ -3,18 +3,24 @@
 const translations = {
     es: {
         // "submit": `Enviar&nbsp;&nbsp;&nbsp;<img class="arrow" src="img/arrow.svg" class= "reverse" alt="Icono enviar" >`,
+        "rightEmail": "Correo electrónico ✓",
+        "wrongEmail": "El correo de confirmación debe coincidir",
         "result1": "<p>Enviando su mensaje...</p>",
         "result2": `<p>¡Gracias por su mensaje!\n\nLe responderé cuanto antes</p>`,
         "result3": `<p>Algo no ha salido bien, lo siento</p>`,
     },
     fr: {
         // "submit": `Envoyer&nbsp;&nbsp;&nbsp;<img class="arrow" src="img/arrow.svg" class= "reverse" alt="Icono enviar" >`,
+        "rightEmail": "Adresse email ✓",
+        "wrongEmail": "L'email de confirmation doit correspondre",
         "result1": "<p>Envoi du message en cours...</p>",
         "result2": `<p>Merci pour votre message!\n\nJe vous répondrai\ndès que possible</p>`,
         "result3": "<p>Quelque chose n'a pas fonctionné, désolée</p>",
     },
     en: {
         // "submit": `Send&nbsp;&nbsp;&nbsp;<img class="arrow" src="img/arrow.svg" class= "reverse" alt="Icono enviar" >`,
+        "rightEmail": "Email ✓",
+        "wrongEmail": "The confirmation email has to match",
         "result1": "<p>Sending your message...</p>",
         "result2": `<p>Thanks for your message!\n\nI'll get in touch as soon as possible</p>`,
         "result3": "<p>Something went wrong, sorry</p>",

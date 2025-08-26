@@ -750,12 +750,14 @@
              #nom,
              #prenom,
              #email,
+             #email-confirm,
              #telephone,
              #message {
                  width: 100%;
                  border-radius: 0.8rem;
                  border: solid 3px var(--olive-light);
                  margin-bottom: 1rem;
+                 margin-top: 0.2rem;
                  padding: 0.3rem 0.8rem 0.2rem 0.8rem;
                  color: var(--olive-black);
 
@@ -763,6 +765,10 @@
                      color: var(--olive-dark);
                      opacity: 0.6;
                  }
+             }
+
+             #email {
+                margin-bottom: 0.3rem;
              }
 
              .submit {
@@ -1144,8 +1150,7 @@
              " . engagement domaines . "
              " . honoraires domaines . "
              " . contact-title domaines . "
-             " . form map-coord . "
-             " . form symbols . ";
+             " . form map-coord . ";
 
          hr {
              display: none;
@@ -1257,10 +1262,6 @@
                      padding-inline: 0;
                      text-align: center;
                  }
-
-                 /* .submit {
-                     margin-bottom: 4px;
-                 } */
              }
 
              .map-coord {
@@ -1288,10 +1289,11 @@
                      border-radius: 0.8rem;
                      border: 3px solid var(--olive-light);
                  }
+
+                 .symbols {
+                    margin-bottom: 1rem;
+                 }
              }
-         }
-         .symbols {
-            grid-area: symbols;
          }
      }
  }
