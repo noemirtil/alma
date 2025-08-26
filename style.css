@@ -825,17 +825,37 @@
                  }
              }
          }
-     }
 
-     .arrow {
-         width: 1rem;
-         transition: all 0.6s;
-         transform: rotate(-180deg);
-     }
+         iframe {
+             width: 100vw;
+             height: 100vw;
+         }
 
-     iframe {
-         width: 100vw;
-         height: 100vw;
+         .symbols {
+             display: flex;
+             justify-content: center;
+             gap: 2rem;
+             width: 8rem;
+             margin-inline: auto;
+             margin-top: 1rem;
+
+             .linkedin {
+                 height: 2.6rem;
+                 width: auto;
+             }
+
+             .lgbt {
+                 height: 2.6rem;
+                 width: auto;
+                 padding: 0.22rem;
+             }
+         }
+
+         .arrow {
+             width: 1rem;
+             transition: all 0.6s;
+             transform: rotate(-180deg);
+         }
      }
  }
 
@@ -1124,7 +1144,8 @@
              " . engagement domaines . "
              " . honoraires domaines . "
              " . contact-title domaines . "
-             " . form map-coord . ";
+             " . form map-coord . "
+             " . form symbols . ";
 
          hr {
              display: none;
@@ -1266,9 +1287,12 @@
                      width: min(45vw, 35rem);
                      border-radius: 0.8rem;
                      border: 3px solid var(--olive-light);
-                     margin-bottom: 2rem;
+                     /* margin-bottom: 2rem; */
                  }
              }
+         }
+         .symbols {
+            grid-area: symbols;
          }
      }
  }

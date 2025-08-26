@@ -22,13 +22,13 @@ const translations = {
 };
 
 //MARK: Elements
-const translate = () => {
-    const t9n = (value) => {
-        document.getElementById(value).innerHTML = translations[language][value];
-    }
-    // elements to translate
-    // t9n("submit");
-}
+// const translate = () => {
+//     const t9n = (value) => {
+//         document.getElementById(value).innerHTML = translations[language][value];
+//     }
+//     // elements to translate
+//     // t9n("submit");
+// }
 
 // set language
 let language = document.getElementsByTagName("html")[0].getAttribute("lang");
