@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
                 updateMenuStatus('contact');
             }
         }
-        if (viewportWidth >= 450 && viewportWidth <= 1000) {
+        else if (viewportWidth >= 450 && viewportWidth < 1000) {
             if (window.pageYOffset < 40) {
                 updateMenuStatus('accueil');
             }
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
                 updateMenuStatus('contact');
             }
         }
-        if (viewportWidth > 1000) {
+        else {
             if (window.pageYOffset < 40) {
                 updateMenuStatus('accueil');
             }

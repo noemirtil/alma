@@ -3,7 +3,7 @@
 
 const checkPrenom = () => {
     let prenomLabel = document.getElementById("prenom-label");
-    if (document.getElementById("prenom").value != "") {
+    if (document.getElementById("prenom").value !== "") {
         prenomLabel.innerHTML = prenomLabel.innerHTML.replace("*", "✓");
     }
     else {
@@ -13,36 +13,11 @@ const checkPrenom = () => {
 
 const checkNom = () => {
     let nomLabel = document.getElementById("nom-label");
-    if (document.getElementById("nom").value != "") {
+    if (document.getElementById("nom").value !== "") {
         nomLabel.innerHTML = nomLabel.innerHTML.replace("*", "✓");
     }
     else {
         nomLabel.innerHTML = nomLabel.innerHTML.replace("✓", "*");
-    }
-}
-
-const checkMessage = () => {
-    let messageLabel = document.getElementById("message-label");
-    if (document.getElementById("message").value != "") {
-        messageLabel.innerHTML = messageLabel.innerHTML.replace("*", "✓");
-    }
-    else {
-        messageLabel.innerHTML = messageLabel.innerHTML.replace("✓", "*");
-    }
-}
-
-const checkConsent = () => {
-    let consentLabel = document.getElementById("consent-label");
-    if (document.getElementById("consent").checked == "true") {
-        consentLabel.innerHTML = consentLabel.innerHTML.replace("*", "✓");
-        console.log(document.getElementById("consent").checked);
-        console.log(consentLabel);
-        console.log("TRRRRUUUUUE");
-    }
-    else {
-        consentLabel.innerHTML = consentLabel.innerHTML.replace("✓", "*");
-        // console.log(document.getElementById("consent").checked);
-        console.log("FAAAALSE");
     }
 }
 
@@ -54,13 +29,17 @@ const confirmEmail = () => {
     let confemail = document.getElementById("email-confirm").value;
 
     let emailLabel = document.getElementById("email-label");
-    if (email = confemail && (email.length > 5)) {
+    if (email == confemail && (confemail.length > 5) && (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/).test(confemail)) {
         emailLabel.style.color = "black";
         emailLabel.innerHTML = translations[language]["rightEmail"];
     }
-    else {
+    else if (email == confemail) {
         emailLabel.style.color = "red";
         emailLabel.innerHTML = translations[language]["wrongEmail"];
+    }
+    else {
+        emailLabel.style.color = "red";
+        emailLabel.innerHTML = translations[language]["matchEmail"];
     }
 }
 
@@ -80,6 +59,26 @@ const checkTel = () => {
     else {
         telLabel.style.color = "red";
         telLabel.innerHTML = translations[language]["wrongTel"];
+    }
+}
+
+const checkMessage = () => {
+    let messageLabel = document.getElementById("message-label");
+    if (document.getElementById("message").value.length > 10) {
+        messageLabel.innerHTML = messageLabel.innerHTML.replace("*", "✓");
+    }
+    else {
+        messageLabel.innerHTML = messageLabel.innerHTML.replace("✓", "*");
+    }
+}
+
+const checkConsent = () => {
+    let consentLabel = document.getElementById("consent-label");
+    if (document.getElementById("consent").checked) {
+        consentLabel.innerHTML = consentLabel.innerHTML.replace("*", "✓");
+    }
+    else {
+        consentLabel.innerHTML = consentLabel.innerHTML.replace("✓", "*");
     }
 }
 

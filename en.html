@@ -174,15 +174,13 @@
         <section class="engagement-section" id="engagement-section">
             <h2><span id="engagement"></span><a href="#engagement">My commitment</a></h2>
             <p>
-                After several years of volunteering in Barcelona with migrant communities in situations of great
-                vulnerability - in
-                particular asylum seekers and unaccompanied minors - <br>
-                I continued my path in France with a Master's degree in Migration,
-                International and European Law, where I also volunteered with NGOs such as La Cimade and Amnesty
-                International.
-                These experiences have guided my way of practicing law: with thoroughness and humanity, and with the
-                conviction that my
-                role as a lawyer is to ensure effective access to rights.
+                I began my career in Barcelona, where I practiced as a lawyer for several years, working primarily in support of migrant
+                workers, unaccompanied minors, and other migrants in highly vulnerable situations.<br>
+                <br>
+                In 2022, I moved to France to pursue a Master's degree in Migrations with a specialization in International and European
+                Law. During this time, I continued volunteering with NGOs such as La Cimade and Amnesty International.<br>
+                <br>
+                These experiences have shaped my way of practicing law: with thoroughness, empathy, and humanity.
             </p>
         </section>
         <hr>
@@ -207,15 +205,15 @@
                 <input type="hidden" name="access_key" value="a9ec7a55-812a-4d24-bb69-b63898fc37f6">
                 <label for="prenom" class="prenom" id="prenom-label">Name *</label>
                 <br>
-                <input type="text" id="prenom" onblur="checkPrenom()" name="prenom" placeholder="Mandatory" autofocus required maxlength="40">
+                <input type="text" id="prenom" onblur="checkPrenom()" name="prenom" placeholder="* Mandatory" autofocus required maxlength="40">
                 <br>
                 <label for="nom" class="nom" id="nom-label">Surname *</label>
                 <br>
-                <input type="text" id="nom" onblur="checkNom()" name="nom" placeholder="Mandatory" required maxlength="80">
+                <input type="text" id="nom" onblur="checkNom()" name="nom" placeholder="* Mandatory" required maxlength="80">
                 <br>
                 <label for="email" class="email" id="email-label">Email *</label>
                 <br>
-                <input type="email" id="email" name="email" placeholder="Mandatory" onblur="confirmEmail()" required minlength="6" maxlength="320">
+                <input type="email" id="email" name="email" placeholder="* Mandatory" required minlength="6" maxlength="320">
                 <input type="email" id="email-confirm" name="email-confirm" placeholder="Confirm the email *"
                     onblur="confirmEmail()" required minlength="6" maxlength="320">
                 <br>
@@ -225,7 +223,7 @@
                 <br>
                 <label for="message" class="message" id="message-label">Message *</label>
                 <br>
-                <textarea rows="6" id="message" onblur="checkMessage()" name="message" placeholder="Mandatory" required maxlength="1000"></textarea>
+                <textarea rows="6" id="message" onblur="checkMessage()" name="message" placeholder="* Mandatory" required minlength="10" maxlength="999"></textarea>
                 <br>
                 <label for="consent" id="consent-label">Tick the box *</label>
                 <input type="checkbox" class="consent" id="consent" onblur="checkConsent()" name="consent" required>
