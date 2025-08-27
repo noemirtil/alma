@@ -79,60 +79,38 @@ window.addEventListener("load", (event) => {
 });
 
 // updateMenuStatus on scroll
-let viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+let targets = [];
+if (window.innerWidth < 1000) {
+    targets = [
+        { element: document.getElementById('accueil-section'), arg: 'accueil' },
+        { element: document.getElementById('cabinet-section'), arg: 'cabinet' },
+        { element: document.getElementById('domaines-section'), arg: 'domaines' },
+        { element: document.getElementById('engagement-section'), arg: 'engagement' },
+        { element: document.getElementById('honoraires-section'), arg: 'honoraires' },
+        { element: document.getElementById('contact'), arg: 'contact' },
+    ];
+}
+else {
+    targets = [
+        { element: document.getElementById('accueil-section'), arg: 'accueil' },
+        { element: document.getElementById('engagement-section'), arg: 'engagement' },
+        { element: document.getElementById('contact'), arg: 'contact' },
+    ];
+}
 
-document.addEventListener('DOMContentLoaded', (e) => {
-    window.addEventListener('scroll', function () {
-        if (viewportWidth < 450) {
-            if (window.pageYOffset < 40) {
-                updateMenuStatus('accueil');
-            }
-            if (window.pageYOffset > 300 && window.pageYOffset < 450) {
-                updateMenuStatus('cabinet');
-            }
-            if (window.pageYOffset > 450 && window.pageYOffset < 1900) {
-                updateMenuStatus('domaines');
-            }
-            if (window.pageYOffset > 1900 && window.pageYOffset < 2300) {
-                updateMenuStatus('engagement');
-            }
-            if (window.pageYOffset > 2500 && window.pageYOffset < 2800) {
-                updateMenuStatus('honoraires');
-            }
-            if (window.pageYOffset > 2800) {
-                updateMenuStatus('contact');
-            }
-        }
-        else if (viewportWidth >= 450 && viewportWidth < 1000) {
-            if (window.pageYOffset < 40) {
-                updateMenuStatus('accueil');
-            }
-            if (window.pageYOffset > 200 && window.pageYOffset < 450) {
-                updateMenuStatus('cabinet');
-            }
-            if (window.pageYOffset > 450 && window.pageYOffset < 1600) {
-                updateMenuStatus('domaines');
-            }
-            if (window.pageYOffset > 1600 && window.pageYOffset < 2100) {
-                updateMenuStatus('engagement');
-            }
-            if (window.pageYOffset > 2100 && window.pageYOffset < 2500) {
-                updateMenuStatus('honoraires');
-            }
-            if (window.pageYOffset > 2500) {
-                updateMenuStatus('contact');
-            }
-        }
-        else {
-            if (window.pageYOffset < 40) {
-                updateMenuStatus('accueil');
-            }
-            if (window.pageYOffset > 600 && window.pageYOffset < 1000) {
-                updateMenuStatus('engagement');
-            }
-            if (window.pageYOffset > 1300) {
-                updateMenuStatus('contact');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            const target = targets.find((t) => t.element === entry.target);
+            if (target) {
+                updateMenuStatus(target.arg);
+                console.log(target.arg);
             }
         }
     });
+}, {
+    threshold: 0.2, // Updates when this fraction of the element is visible
+    rootMargin: '-300px 0px', // Offset for the header
 });
+
+targets.forEach((target) => observer.observe(target.element));

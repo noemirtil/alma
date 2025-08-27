@@ -768,7 +768,7 @@
              }
 
              #email {
-                margin-bottom: 0.3rem;
+                 margin-bottom: 0.3rem;
              }
 
              .submit {
@@ -1240,7 +1240,7 @@
                  width: min(45vw, 35rem);
              }
          }
-
+         
          .contact-section {
              display: contents;
 
@@ -1291,7 +1291,7 @@
                  }
 
                  .symbols {
-                    margin-bottom: 1rem;
+                     margin-bottom: 1rem;
                  }
              }
          }
