@@ -569,13 +569,23 @@
 
          .accueil-title h2 {
              font-size: max(1rem, 5.6vw);
-             line-height: max(1.8rem, 5.6vw);
+             line-height: max(1.8rem, 7vw);
              font-weight: 400;
              letter-spacing: 0.016rem;
              padding-top: 1.6rem;
 
              &.second-line {
                  padding-top: 0;
+
+                 &::before {
+                     content: "&";
+                     font-family: calisto-mt-bold, Georgia;
+                     font-size: 10vw;
+                     color: var(--olive-light);
+                     position: absolute;
+                     left: 4vw;
+                     top: 0.2vw;
+                 }
              }
          }
 
@@ -914,6 +924,10 @@
              top: calc(-8rem - 11vw);
          }
 
+         #accueil-title h2 {
+             line-height: 2.4rem;
+         }
+
          .second-line {
              padding-top: 1vw;
          }
@@ -977,7 +991,6 @@
 
              .accueil-title {
                  position: relative;
-                 /* left: calc(-2rem + 3vw); */
                  grid-area: accueil-title;
                  display: flex;
                  flex-direction: column;
@@ -995,7 +1008,6 @@
                      color: white;
                      position: absolute;
                      left: -2rem;
-                     /* top: 1rem; */
                  }
 
                  h2 {
@@ -1005,11 +1017,15 @@
 
                  #second-line {
                      padding-top: 0.5rem;
+
+                     &::before {
+                         display: none;
+                     }
                  }
              }
 
              .pic-cont {
-                background-color: transparent;
+                 background-color: transparent;
                  margin: 0;
                  grid-area: portrait;
                  display: flex;
@@ -1064,21 +1080,21 @@
 
      main {
 
-        .accueil-section {
+         .accueil-section {
 
-            #accueil-title {
-                left: 0;
+             #accueil-title {
+                 left: 0;
 
-                h2 {
-                    font-size: calc(1rem + 2vw);
-                    line-height: 2.4rem;
-                }
-            }
+                 h2 {
+                     font-size: calc(1rem + 2vw);
+                     line-height: 2.4rem;
+                 }
+             }
 
-            .pic-cont {
-                width: 20rem;
-                right: 0;
-            }
+             .pic-cont {
+                 width: 20rem;
+                 right: 0;
+             }
          }
      }
  }
@@ -1188,7 +1204,8 @@
              margin-inline: auto;
 
              #accueil-title {
-                left: -2rem;
+                 left: -2rem;
+
                  h2 {
                      font-size: 2.3rem;
                  }
