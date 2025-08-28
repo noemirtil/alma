@@ -505,6 +505,21 @@
      flex-direction: column;
      align-items: center;
 
+     .cookies {
+         position: fixed;
+         bottom: 0;
+         background-color: var(--olive);
+         color: white;
+         font-family: system-ui, Arial;
+         font-weight: 600;
+         padding: 0.8rem 1rem 0.4rem 1rem;
+         text-align: center;
+         border-top-left-radius: 1rem;
+         border-top-right-radius: 1rem;
+         transition: all 2s;
+         z-index: 1;
+     }
+
      #form-shadow {
          height: 200vh;
          width: 100vw;
@@ -577,7 +592,7 @@
              &.second-line {
                  padding-top: 0;
 
-                 &::before {
+                 /* &::before {
                      content: "&";
                      font-family: calisto-mt-bold, Georgia;
                      font-size: 10vw;
@@ -585,7 +600,7 @@
                      position: absolute;
                      left: 4vw;
                      top: 0.2vw;
-                 }
+                 } */
              }
          }
 
@@ -995,20 +1010,18 @@
                  display: flex;
                  flex-direction: column;
                  align-items: flex-start;
-                 /* background-color: yellow; */
                  width: max-content;
                  justify-self: flex-end;
                  left: 1rem;
 
-                 &::before {
+                 /* &::before {
                      content: "&";
                      font-family: calisto-mt-bold, Georgia;
                      font-size: 4rem;
-                     color: var(--olive-lighter);
                      color: white;
                      position: absolute;
                      left: -2rem;
-                 }
+                 } */
 
                  h2 {
                      font-size: 1.7rem;
@@ -1022,6 +1035,10 @@
                          display: none;
                      }
                  }
+             }
+
+             .titulo-esp {
+                left: 3.2rem;
              }
 
              .pic-cont {
@@ -1194,6 +1211,10 @@
 
          hr {
              display: none;
+         }
+
+         .cookies {
+            justify-self: center;
          }
 
          .accueil-section {

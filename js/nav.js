@@ -1,4 +1,13 @@
 // Built by Noemie Baudouin https://github.com/noemirtil
+
+// Cookies modal:
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        document.getElementById("cookies").style.bottom = "-5rem";
+    }, 2000);
+});
+
+// Navigation:
 const toggleMenu = () => {
     document.getElementById("nav-mobile").classList.toggle("show-mob");
     document.getElementById("shadow").classList.toggle("show-mob");
@@ -104,7 +113,6 @@ const observer = new IntersectionObserver((entries) => {
             const target = targets.find((t) => t.element === entry.target);
             if (target) {
                 updateMenuStatus(target.arg);
-                console.log(target.arg);
             }
         }
     });
