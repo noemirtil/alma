@@ -1012,7 +1012,7 @@
                  align-items: flex-start;
                  width: max-content;
                  justify-self: flex-end;
-                 left: 1rem;
+                 /* left: 1rem; */
 
                  /* &::before {
                      content: "&";
@@ -1038,7 +1038,7 @@
              }
 
              .titulo-esp {
-                left: 3.2rem;
+                left: 1rem;
              }
 
              .pic-cont {
