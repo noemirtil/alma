@@ -17,22 +17,13 @@
  }
 
  :root {
-     --olive-old: #BCBC7E;
      --olive-dark: #898951;
-     --olive-dark-trans: #89895199;
-     --olive-darkest: #787847;
      --olive-black: #33331E;
      --olive-black-hsl: 60deg 26% 16%;
-     --olive-white: #F7F7EC;
-     --olive-lighter-old: #EEEEDB;
-     --olive-light-old: #DDDDB9;
-
-     /* chati */
      --olive: #748c63;
      --olive-mid-light: #A7BA9A;
      --olive-light: #e6ede1;
      --olive-lighter: #f3f6f1;
-
 
      --shadow-elevation-medium:
          0.1px 1px 1px hsl(var(--olive-black-hsl) / 0.3),
@@ -45,17 +36,7 @@
          0.2px 2.1px 2.1px -0.9px hsl(var(--olive-black-hsl) / 0.08),
          0.4px 4.4px 4.3px -1.7px hsl(var(--olive-black-hsl) / 0.06),
          0.8px 7px 7px -2.6px hsl(var(--olive-black-hsl) / 0.04);
-     --shadow-elevation-high:
-         0.1px 1px 1px hsl(var(--olive-black-hsl) / 0.38),
-         0.3px 3.3px 3.2px -0.4px hsl(var(--olive-black-hsl) / 0.35),
-         0.5px 5.9px 5.8px -0.8px hsl(var(--olive-black-hsl) / 0.33),
-         0.8px 9.6px 9.4px -1.2px hsl(var(--olive-black-hsl) / 0.31),
-         1.2px 15.2px 14.9px -1.6px hsl(var(--olive-black-hsl) / 0.29),
-         1.9px 23.5px 23px -1.9px hsl(var(--olive-black-hsl) / 0.27);
-     --box-shadow: 0 2px 6px #33331E;
      --text-shadow: 2px 2px 2px #33331e88;
-     --link-shadow: 2px 2px 1px var(--mid);
-     --menu-shadow: 2px 3px 1px var(--mid);
  }
 
  html {
@@ -100,7 +81,6 @@
      form {
          /* Improve line wrapping */
          text-wrap: balance;
-         /* text-align: justify; */
          overflow-wrap: break-word;
          padding: 0.5rem 5vw 0.8rem 5vw;
          list-style-type: circle;
@@ -120,7 +100,7 @@
      }
 
      h2 {
-         /* trick to offset the anchor scrolling navigation */
+         /* To offset the anchor scrolling navigation */
          position: relative;
 
          span {
@@ -173,10 +153,7 @@
          width: 100%;
          height: auto;
          overflow: hidden;
-         /* The image keeps its aspect ratio and fills the given dimension. The image will be clipped to fit */
          object-fit: cover;
-         /* The image keeps its aspect ratio,
-                but is resized to fit within the given dimension */
          /* Remove the gap between content and the bottom of their containers */
          vertical-align: middle;
          border: none;
@@ -215,7 +192,7 @@
      [type="search"] {
          /* Correct the odd appearance in Chrome and Safari */
          -webkit-appearance: textfield;
-         /* Correct the outline style in Safar */
+         /* Correct the outline style in Safari */
          outline-offset: -2px;
      }
 
@@ -244,10 +221,6 @@
      .hidden {
          display: none;
      }
-
-     .transparent {
-         visibility: hidden;
-     }
  }
 
  header {
@@ -255,9 +228,10 @@
      top: 0;
      z-index: 1;
      /* background-color: #e6ede1e4; */
-    background-image:
-            linear-gradient(135deg, var(--olive-lighter),
-                var(--olive-light));
+     background-image:
+         linear-gradient(115deg,
+             var(--olive-lighter),
+             var(--olive-light));
      transition: all 0.24s;
      border-bottom: solid 0.2rem var(--olive);
 
@@ -428,7 +402,7 @@
                  }
 
                  &.current-not {
-                     /* spaceholder to avoid jumping */
+                     /* Spaceholder to avoid jumping */
                      border-bottom: 0.18rem solid transparent;
                      transition: all 0.6s;
                      /* Necessary for border animation */
@@ -552,7 +526,7 @@
              color: white;
              font-size: min(34px, 7vw);
              white-space: pre-line;
-             /* Necessary for escaping \n newline in JS innerHTML */
+             /* Necessary for escaping \n newline in JS innerHTML t9n */
          }
      }
 
@@ -562,7 +536,7 @@
          h3 a,
          p a {
              display: inline-block;
-             /* NEcessary for transform on inline elements */
+             /* Necessary for transform on inline elements */
              text-decoration: underline var(--olive) 2px;
              transition: all 0.6s;
 
@@ -579,7 +553,6 @@
          flex-direction: column;
          align-items: center;
          text-align: center;
-         /* border-bottom: solid 1px var(--olive); */
 
          .accueil-title h2 {
              font-size: max(1rem, 5.6vw);
@@ -590,25 +563,15 @@
 
              &.second-line {
                  padding-top: 0;
-
-                 /* &::before {
-                     content: "&";
-                     font-family: calisto-mt-bold, Georgia;
-                     font-size: 10vw;
-                     color: var(--olive-light);
-                     position: absolute;
-                     left: 4vw;
-                     top: 0.2vw;
-                 } */
              }
          }
 
          .pic-cont {
              margin-top: 1rem;
-             /* background-color: var(--olive-light); */
-            background-image:
-                    linear-gradient(135deg, var(--olive-lighter),
-                        var(--olive-light));
+             background-image:
+                 linear-gradient(115deg,
+                     var(--olive-lighter),
+                     var(--olive-light));
              border-radius: 0.8rem;
 
              img {
@@ -627,11 +590,7 @@
 
      .aj {
          text-align: center;
-         /* background-color: var(--olive-lighter); */
-        background-image:
-                linear-gradient(135deg, var(--olive-lighter),
-                    var(--olive-light),
-                        var(--olive-lighter));
+         background-color: var(--olive-lighter);
          border-radius: 0.8rem;
          width: 90%;
          margin-inline: auto;
@@ -708,14 +667,10 @@
 
              .card-head {
                  display: flex;
-                 /* gap: 1rem; */
-                 /* justify-content: space-between; */
-                 /* align-items: flex-end; */
                  padding-bottom: 0.5rem;
 
                  img {
                      padding: 1rem 0 0 2rem;
-                     /* padding: 1rem 2rem 0 0; */
                      width: 4rem;
                  }
 
@@ -894,6 +849,11 @@
              transform: rotate(-180deg);
          }
      }
+
+     #iframe {
+         border-radius: 0.8rem;
+         border: 3px solid var(--olive-light);
+     }
  }
 
  footer {
@@ -936,7 +896,7 @@
 
      main {
 
-         /* trick to offset the anchor scrolling navigation */
+         /* To offset the anchor scrolling navigation */
          #cabinet,
          #domaines,
          #engagement,
@@ -992,7 +952,7 @@
 
      main {
 
-         /* trick to offset the anchor scrolling navigation */
+         /* To offset the anchor scrolling navigation */
          #cabinet,
          #domaines,
          #engagement,
@@ -1005,10 +965,10 @@
              display: grid;
              grid-template-columns: 45vw 45vw;
              grid-template-areas: "accueil-title portrait";
-             /* background-color: var(--olive-light); */
-            background-image:
-                    linear-gradient(135deg, var(--olive-lighter),
-                        var(--olive-light));
+             background-image:
+                 linear-gradient(135deg,
+                     var(--olive-lighter),
+                     var(--olive-light));
              width: 90vw;
              margin: 2rem 5vw 0 5vw;
              border-radius: 1rem;
@@ -1037,11 +997,10 @@
              }
 
              .titulo-esp {
-                left: 1rem;
+                 left: 1rem;
              }
 
              .pic-cont {
-                 /* background-color: transparent; */
                  background-image: none;
                  margin: 0;
                  grid-area: portrait;
@@ -1155,7 +1114,7 @@
              }
 
              &>.current-not {
-                 /* spaceholder to avoid jumping */
+                 /* Spaceholder to avoid jumping */
                  border-bottom: 0.18rem solid transparent;
                  transition: all 0.6s;
                  /* Necessary for border animation */
@@ -1214,7 +1173,7 @@
          }
 
          .cookies {
-            justify-self: center;
+             justify-self: center;
          }
 
          .accueil-section {
@@ -1353,8 +1312,6 @@
 
                  #iframe {
                      width: min(45vw, 35rem);
-                     border-radius: 0.8rem;
-                     border: 3px solid var(--olive-light);
                  }
 
                  .symbols {

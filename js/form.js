@@ -1,6 +1,6 @@
 // Built by Noemie Baudouin https://github.com/noemirtil
-// Contact form
 
+// Contact form
 const checkPrenom = () => {
     let prenomLabel = document.getElementById("prenom-label");
     if (document.getElementById("prenom").value !== "") {

@@ -3,7 +3,7 @@
 // Cookies modal:
 window.addEventListener('load', () => {
     setTimeout(() => {
-        document.getElementById("cookies").style.bottom = "-5rem";
+        document.getElementById("cookies").style.bottom = "-8rem";
     }, 2000);
 });
 
