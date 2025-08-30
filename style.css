@@ -333,22 +333,23 @@
              width: 21px;
              height: 3px;
              margin: 4px 0;
-             transition: all 0.5s;
+             transition: all 0.6s;
          }
 
          .burger--open .burger__bar1 {
-             transition: all 0.3s;
+             transition: all 0.6s;
              transform: translate(0, 7px) rotate(-45deg);
              background-color: white;
          }
 
          .burger--open .burger__bar2 {
-             transition: all 0.3s;
-             opacity: 0;
+             transition: all 0.5s;
+             background-color: white;
+             transform: translate(-95vw, -10vh) rotate(-1440deg);
          }
 
          .burger--open .burger__bar3 {
-             transition: all 0.3s;
+             transition: all 0.6s;
              transform: translate(0, -7px) rotate(45deg);
              background-color: white;
          }
