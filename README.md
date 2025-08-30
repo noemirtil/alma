@@ -9,7 +9,11 @@ The `t9n.js` file contains some commented-out snippets that I might use to group
 ## Minimalist design and extreme accessibility
 
 Unconcerned by sophisticated designs, the instructions of my customer were to achieve a very simple refined document-like presentation of her services, with **as few navigation menus as possible**, so that a non french language user could directly identify their **language option** without having to search for it through any kind of dropdown menu, taking into account that some users might have been going through a very hard and precarious road.<br>
-Also the easy acces for persons unused to navigate through menus was a big priority.<br>
+Also the easy acces for persons unused to navigate through menus was a big priority.
+
+## Frameworks-free
+
+Purposely prioritizing vanilla code to using any frameworks.<br>
 <br>
 <br>
 <br>
