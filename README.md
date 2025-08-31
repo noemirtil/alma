@@ -13,7 +13,7 @@ Also the easy acces for persons unused to navigate through menus was a big prior
 
 ## Frameworks-free
 
-Purposely prioritizing vanilla code to using any frameworks.<br>
+Purposely prioritizing vanilla code over using any frameworks.<br>
 <br>
 <br>
 <br>
